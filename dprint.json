@@ -1,0 +1,15 @@
+{
+    "indentWidth": 4,
+    "typescript": {
+        "quoteStyle": "preferSingle"
+    },
+    "excludes": [
+        "**/node_modules",
+        "**/*-lock.json",
+        "**/dist"
+    ],
+    "plugins": [
+        "https://plugins.dprint.dev/typescript-0.95.8.wasm",
+        "https://plugins.dprint.dev/json-0.20.0.wasm"
+    ]
+}

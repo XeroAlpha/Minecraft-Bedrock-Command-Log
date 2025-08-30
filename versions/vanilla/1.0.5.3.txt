@@ -1,0 +1,60 @@
+/clear [player: target] [itemName: string] [data: int] [maxCount: int]
+/clone <begin: x y z> <end: x y z> <destination: x y z> [maskMode: string] [cloneMode: string] [tileName: string] [tileData: int]
+/closewebsocket 
+/deop <player: target>
+/difficulty <difficulty: int>
+/difficulty <difficulty: string>
+/effect <player: target> <clear: string>
+/effect <player: target> <effect: string> [seconds: int] [amplifier: int] [hideParticles: bool]
+/enchant <player: target> <enchantmentId: int> [level: int]
+/enchant <player: target> <enchantmentName: string> [level: int]
+/execute <origin: target> <position: x y z> <command: string>
+/execute <origin: target> <position: x y z> <detect: string> <detectPos: x y z> <detectBlock: string> <detectData: int> <command: string>
+/fill <from: x y z> <to: x y z> <tileName: string> [tileData: int] [oldBlockHandling: string] [replaceTileName: string] [replaceDataValue: int]
+/gamemode <gameMode: int> [player: target]
+/gamemode <gameMode: string> [player: target]
+/gamerule <rule: string> <value: bool>
+/gamerule <rule: string> <value: int>
+/gamerule [rule: string]
+/give <player: target> <itemName: string> [amount: int] [data: int]
+/help <command: string>
+/help [page: int]
+/kill [target: target]
+/list 
+/locate <feature: string>
+/me <action: string>
+/op <player: target>
+/playsound <sound: string> <player: target> [position: x y z] [volume: float] [pitch: float] [minimumVolume: float]
+/replaceitem <block: string> <position: x y z> <slotType: string> <slotId: int> <itemName: string> [amount: int] [data: int]
+/replaceitem <entity: string> <target: target> <slotType: string> <slotId: int> <itemName: string> [amount: int] [data: int]
+/say <message: string>
+/setblock <position: x y z> <tileName: string> [tileData: int] [oldBlockHandling: string]
+/setworldspawn [spawnPoint: x y z]
+/spawnpoint [player: target] [spawnPos: x y z]
+/spreadplayers <x: rotation> <z: rotation> <spreadDistance: float> <maxRange: float> <victim: target>
+/stopsound <player: target> [sound: string]
+/summon <entityType: string> [spawnPos: x y z]
+/tell <recipient: target> <message: string>
+/testfor <victim: target>
+/testforblock <position: x y z> <tileName: string> [dataValue: int]
+/testforblocks <begin: x y z> <end: x y z> <destination: x y z> [mode: string]
+/time add <amount: int>
+/time query <time: string>
+/time set <time: int>
+/time set <time: string>
+/title <player: target> <actionbar: string> <titleText: string>
+/title <player: target> <clear: string>
+/title <player: target> <reset: string>
+/title <player: target> <subtitle: string> <titleText: string>
+/title <player: target> <times: string> <fadeIn: int> <stay: int> <fadeOut: int>
+/title <player: target> <title: string> <titleText: string>
+/toggledownfall 
+/tp <destination: target>
+/tp <destination: x y z> [y-rot: rotation] [x-rot: rotation]
+/tp <victim: target> <destination: target>
+/tp <victim: target> <destination: x y z> [y-rot: rotation] [x-rot: rotation]
+/transferserver <server: string> <port: int>
+/weather <type: string> [duration: int]
+/wsserver <serverUri: string>
+/xp <amount: int> <player: target>
+/xp <amount: int>L <player: target>

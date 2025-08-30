@@ -1,0 +1,106 @@
+- |
+  /clear [player: target] [itemName: string] [data: int] [maxCount: int]
+  /clear [player: target] [itemName: Item] [data: int] [maxCount: int]
+- |
+  /difficulty <difficulty: string>
+  /difficulty <difficulty: Difficulty>
+- |
+  /enchant <player: target> <enchantmentName: string> [level: int]
+  /enchant <player: target> <enchantmentName: Enchant> [level: int]
+- |
+  /execute <origin: target> <position: x y z> <command: string>
+  /execute <origin: target> <position: x y z> <command: command>
+- |
+  /gamemode <gameMode: string> [player: target]
+  /gamemode <gameMode: GameMode> [player: target]
+- |
+  /gamerule <rule: string> [true|false]
+  /gamerule <rule: BoolGameRule> [true|false]
+- |
+  /give <player: target> <itemName: string> [amount: int] [data: int] [components: components]
+  /give <player: target> <itemName: Item> [amount: int] [data: int] [components: json]
+- |
+  /locate <feature: string>
+  /locate <feature: Feature>
+- |
+  /me <action: string>
+  /me <message: message>
+- |
+  /say <message: string>
+  /say <message: message>
+- |
+  /spreadplayers <x: rotation> <z: rotation> <spreadDistance: float> <maxRange: float> <victim: target>
+  /spreadplayers <x: value> <z: value> <spreadDistance: float> <maxRange: float> <victim: target>
+- |
+  /summon <entityType: string> [spawnPos: x y z]
+  /summon <entityType: EntityType> [spawnPos: x y z]
+- |
+  /tell <recipient: target> <message: string>
+  /tell <target: target> <message: message>
+- |
+  /testforblock <position: x y z> <tileName: string> [dataValue: int]
+  /testforblock <position: x y z> <tileName: Block> [dataValue: int]
+- |
+  /time set <time: int>
+  /time set <amount: int>
+- |
+  /tp <destination: x y z> [y-rot: int] [x-rot: int]
+  /tp <destination: x y z> [y-rot: rotation] [x-rot: rotation]
+- |
+  /tp <victim: target> <destination: x y z> [y-rot: int] [x-rot: int]
+  /tp <victim: target> <destination: x y z> [y-rot: rotation] [x-rot: rotation]
+- |
+  /time set <time: string>
+  /time set <time: TimeSpec>
+- |
+  /function <name: unknown>
+  /function <name: filepath>
+- |
+  /wsserver <serverUri: string>
+  /wsserver <serverUri: text>
+- |
+  /gamerule <rule: string> [value: int]
+  /gamerule <rule: IntGameRule> [value: int]
+- |
+  /summon <entityType: EntityType> [spawnPos: x y z] [spawnEvent: string] [named: string]
+  /summon <entityType: EntityType> [spawnPos: x y z] [spawnEvent: string] [nameTag: string]
+- |
+  /scoreboard players <add|remove|set> <player: target> <objective: string> <count: int>
+  /scoreboard players <set|add|remove> <player: target> <objective: string> <count: int>
+  /scoreboard players <remove|set|add> <player: target> <objective: string> <count: int>
+- |
+  /tag <entity: target> <add|remove> <name: string>
+  /tag <entity: target> <remove|add> <name: string>
+- |
+  /locate <feature: Structure> [useNewChunksOnly: Boolean]
+  /locate <feature: Feature> [useNewChunksOnly: Boolean]
+- |
+  /locate structure <structure: string> [useNewChunksOnly: Boolean]
+  /locate structure <structure: Structure> [useNewChunksOnly: Boolean]
+- |
+  /recipe give <victim: target> <recipe: string>
+  /recipe give <player: target> <recipe: string>
+- |
+  -/recipe give <victim: target> <recipe: string>
+  -/recipe give <player: target> <recipe: string>
+- |
+  /recipe take <victim: target> <recipe: string>
+  /recipe take <player: target> <recipe: string>
+- |
+  -/recipe take <victim: target> <recipe: string>
+  -/recipe take <player: target> <recipe: string>
+- |
+  /gametest run <testName: string> <stopOnFailure: Boolean> <repeatCount: int> [rotationSteps: int]
+  /gametest run <testName: GameTestName> <stopOnFailure: Boolean> <repeatCount: int> [rotationSteps: int]
+- |
+  /gametest run <testName: GameTestName> [rotationSteps: int]
+  /gametest run <testName: string> [rotationSteps: int]
+- |
+  /gametest runset [tag: GameTestTag] [rotationSteps: int]
+  /gametest runset [tag: string] [rotationSteps: int]
+- |
+  /camera <players: target> fade color <red: float> <green: float> <blue: float>
+  /camera <players: target> fade color <red: int> <green: int> <blue: int>
+- |
+  /camera <players: target> fade time <fadeInSeconds: float> <holdSeconds: float> <fadeOutSeconds: float> color <red: float> <green: float> <blue: float>
+  /camera <players: target> fade time <fadeInSeconds: float> <holdSeconds: float> <fadeOutSeconds: float> color <red: int> <green: int> <blue: int>

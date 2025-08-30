@@ -1,0 +1,20 @@
+{
+  "name": "minecraft-command-log",
+  "version": "1.0.0",
+  "type": "module",
+  "main": "main.js",
+  "dependencies": {
+    "@devicefarmer/adbkit": "^3.3.8",
+    "@devicefarmer/adbkit-apkreader": "^3.2.4",
+    "cheerio": "^1.1.2",
+    "get-port": "^7.1.0",
+    "got": "^14.4.7",
+    "mcpews": "^4.0.1",
+    "yaml": "^2.8.1"
+  },
+  "author": "ProjectXero",
+  "license": "GPL-3.0",
+  "devDependencies": {
+    "@types/node": "^24.3.0"
+  }
+}

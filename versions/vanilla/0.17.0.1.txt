@@ -1,0 +1,40 @@
+/clone <begin: x y z> <end: x y z> <destination: x y z> [maskMode: string] [cloneMode: string] [tileName: string] [tileData: int]
+/closewebsocket 
+/deop <player: target>
+/enchant <player: target> <enchantmentId: int> [level: int]
+/enchant <player: target> <enchantmentName: string> [level: int]
+/execute <origin: target> <position: x y z> <command: string>
+/execute <origin: target> <position: x y z> <detect: string> <detectPos: x y z> <detectBlock: string> <detectData: int> <command: string>
+/executeasself <command: string>
+/fill <from: x y z> <to: x y z> <tileName: string> [tileData: int] [oldBlockHandling: string] [replaceTileName: string] [replaceDataValue: int]
+/gamemode <gameMode: int> [player: target]
+/gamemode <gameMode: string> [player: target]
+/give <player: target> <itemName: string> [amount: int] [data: int]
+/help <command: string>
+/help [page: int]
+/kill [target: target]
+/list [details: string]
+/listd [details: string]
+/locate <feature: string>
+/op <player: target>
+/say <message: string>
+/setblock <position: x y z> <tileName: string> [tileData: int] [oldBlockHandling: string]
+/setworldspawn [spawnPoint: x y z]
+/spawnpoint [player: target] [spawnPos: x y z]
+/summon <entityType: string> <spawnPos: x y z>
+/tell <recipient: target> <message: string>
+/testforblock <position: x y z> <tileName: string> [dataValue: int]
+/testforblocks <begin: x y z> <end: x y z> <destination: x y z> [mode: string]
+/time add <amount: int>
+/time query <time: string>
+/time set <time: int>
+/time set <time: string>
+/toggledownfall 
+/tp <destination: target>
+/tp <destination: x y z> [y-rot: int] [x-rot: int]
+/tp <victim: target> <destination: target>
+/tp <victim: target> <destination: x y z> [y-rot: int] [x-rot: int]
+/weather <type: string> [duration: int]
+/wsserver <serverUri: string>
+/xp <amount: int> <player: target>
+/xp <amount: int>L <player: target>

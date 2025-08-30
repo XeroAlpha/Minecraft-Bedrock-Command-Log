@@ -1,0 +1,1905 @@
+versions:
+  0.16.1.0:
+    vanilla:
+      added: |
+        /clone <begin: x y z> <end: x y z> <destination: x y z> [maskMode: string] [cloneMode: string] [tileName: string] [tileData: int]
+        /closewebsocket 
+        /deop <player: target>
+        /enchant <player: target> <enchantmentId: int> [level: int]
+        /enchant <player: target> <enchantmentName: string> [level: int]
+        /execute <command: string>
+        /execute <origin: target> <position: x y z> <command: string>
+        /execute <origin: target> <position: x y z> <detect: string> <detectPos: x y z> <detectBlock: string> <detectData: int> <command: string>
+        /fill <from: x y z> <to: x y z> <tileName: string> [tileData: int] [oldBlockHandling: string] [replaceTileName: string] [replaceDataValue: int]
+        /gamemode <gameMode: int> [player: target]
+        /gamemode <gameMode: string> [player: target]
+        /give <player: target> <itemName: string> [amount: int] [data: int]
+        /help <command: string>
+        /help [page: int]
+        /kill [target: target]
+        /list [details: string]
+        /listd [details: string]
+        /op <player: target>
+        /say <message: string>
+        /setblock <position: x y z> <tileName: string> [tileData: int] [oldBlockHandling: string]
+        /setworldspawn [spawnPoint: x y z]
+        /spawnpoint [player: target] [spawnPos: x y z]
+        /summon <entityType: string> <spawnPos: x y z>
+        /tell <recipient: target> <message: string>
+        /testforblock <position: x y z> <tileName: string> [dataValue: int]
+        /testforblocks <begin: x y z> <end: x y z> <destination: x y z> [mode: string]
+        /time add <amount: int>
+        /time query <time: string>
+        /time set <time: int>
+        /time set <time: string>
+        /toggledownfall 
+        /tp <destination: target>
+        /tp <destination: x y z> [y-rot: int] [x-rot: int]
+        /tp <victim: target> <destination: target>
+        /tp <victim: target> <destination: x y z> [y-rot: int] [x-rot: int]
+        /weather <type: string> [duration: int]
+        /wsserver <serverUri: string>
+        /xp <amount: int> <player: target>
+        /xp <amount: int>L <player: target>
+  1.0.2.1:
+    vanilla:
+      renamed:
+        - old: "/tp <destination: x y z> [y-rot: int] [x-rot: int]"
+          new: "/tp <destination: x y z> [y-rot: rotation] [x-rot: rotation]"
+        - old: "/tp <victim: target> <destination: x y z> [y-rot: int] [x-rot: int]"
+          new: "/tp <victim: target> <destination: x y z> [y-rot: rotation] [x-rot: rotation]"
+      added: |
+        /executeasself <command: string>
+        /list 
+        /locate <feature: string>
+        /summon <entityType: string> [spawnPos: x y z]
+      removed: |
+        /execute <command: string>
+        /list [details: string]
+        /summon <entityType: string> <spawnPos: x y z>
+  1.0.3.12:
+    vanilla:
+      added:
+        - "/transferserver <server: string> <port: int>"
+  1.0.5.54:
+    vanilla:
+      added: |
+        /clear [player: target] [itemName: string] [data: int] [maxCount: int]
+        /difficulty <difficulty: int>
+        /difficulty <difficulty: string>
+        /effect <player: target> <clear: string>
+        /effect <player: target> <effect: string> [seconds: int] [amplifier: int] [hideParticles: bool]
+        /gamerule <rule: string> <value: bool>
+        /gamerule <rule: string> <value: int>
+        /gamerule [rule: string]
+        /me <action: string>
+        /playsound <sound: string> <player: target> [position: x y z] [volume: float] [pitch: float] [minimumVolume: float]
+        /replaceitem <block: string> <position: x y z> <slotType: string> <slotId: int> <itemName: string> [amount: int] [data: int]
+        /replaceitem <entity: string> <target: target> <slotType: string> <slotId: int> <itemName: string> [amount: int] [data: int]
+        /spreadplayers <x: rotation> <z: rotation> <spreadDistance: float> <maxRange: float> <victim: target>
+        /stopsound <player: target> [sound: string]
+        /testfor <victim: target>
+        /title <player: target> <actionbar: string> <titleText: string>
+        /title <player: target> <clear: string>
+        /title <player: target> <reset: string>
+        /title <player: target> <subtitle: string> <titleText: string>
+        /title <player: target> <times: string> <fadeIn: int> <stay: int> <fadeOut: int>
+        /title <player: target> <title: string> <titleText: string>
+  1.1.1.51:
+    vanilla:
+      added: |
+        /enableencryption <publicKey: string> <salt: string>
+        /fill <from: x y z> <to: x y z> <tileName: string> <tileData: int> <oldBlockHandling: string> <replaceTileName: string> <replaceDataValue: int>
+        /fill <from: x y z> <to: x y z> <tileName: string> [tileData: int] [oldBlockHandling: string]
+        /getlocalplayername 
+        /give <player: target> <itemName: string> [amount: int] [data: int] [components: components]
+        /replaceitem <block: string> <position: x y z> <slotType: string> <slotId: int> <itemName: string> [amount: int] [data: int] [components: components]
+        /replaceitem <entity: string> <target: target> <slotType: string> <slotId: int> <itemName: string> [amount: int] [data: int] [components: components]
+        /setmaxplayers <maxPlayers: int>
+      removed: |
+        /fill <from: x y z> <to: x y z> <tileName: string> [tileData: int] [oldBlockHandling: string] [replaceTileName: string] [replaceDataValue: int]
+        /give <player: target> <itemName: string> [amount: int] [data: int]
+        /replaceitem <block: string> <position: x y z> <slotType: string> <slotId: int> <itemName: string> [amount: int] [data: int]
+        /replaceitem <entity: string> <target: target> <slotType: string> <slotId: int> <itemName: string> [amount: int] [data: int]
+  1.2.1.1:
+    vanilla:
+      renamed:
+        - old: "/clear [player: target] [itemName: string] [data: int] [maxCount: int]"
+          new: "/clear [player: target] [itemName: Item] [data: int] [maxCount: int]"
+        - old: "/difficulty <difficulty: string>"
+          new: "/difficulty <difficulty: Difficulty>"
+        - old: "/enchant <player: target> <enchantmentName: string> [level: int]"
+          new: "/enchant <player: target> <enchantmentName: Enchant> [level: int]"
+        - old: "/execute <origin: target> <position: x y z> <command: string>"
+          new: "/execute <origin: target> <position: x y z> <command: command>"
+        - old: "/gamemode <gameMode: string> [player: target]"
+          new: "/gamemode <gameMode: GameMode> [player: target]"
+        - old: "/give <player: target> <itemName: string> [amount: int] [data: int] [components: components]"
+          new: "/give <player: target> <itemName: Item> [amount: int] [data: int] [components: json]"
+        - old: "/locate <feature: string>"
+          new: "/locate <feature: Feature>"
+        - old: "/me <action: string>"
+          new: "/me <message: message>"
+        - old: "/say <message: string>"
+          new: "/say <message: message>"
+        - old: "/spreadplayers <x: rotation> <z: rotation> <spreadDistance: float> <maxRange: float> <victim: target>"
+          new: "/spreadplayers <x: value> <z: value> <spreadDistance: float> <maxRange: float> <victim: target>"
+        - old: "/summon <entityType: string> [spawnPos: x y z]"
+          new: "/summon <entityType: EntityType> [spawnPos: x y z]"
+        - old: "/tell <recipient: target> <message: string>"
+          new: "/tell <target: target> <message: message>"
+        - old: "/testforblock <position: x y z> <tileName: string> [dataValue: int]"
+          new: "/testforblock <position: x y z> <tileName: Block> [dataValue: int]"
+        - old: "/time set <time: int>"
+          new: "/time set <amount: int>"
+        - old: "/time set <time: string>"
+          new: "/time set <time: TimeSpec>"
+        - old: "/wsserver <serverUri: string>"
+          new: "/wsserver <serverUri: text>"
+      added: |
+        /? [command: CommandName]
+        /? <page: int>
+        /alwaysday [true|false]
+        /clone <begin: x y z> <end: x y z> <destination: x y z> [replace|masked] [normal|force|move]
+        /clone <begin: x y z> <end: x y z> <destination: x y z> filtered <normal|force|move> <tileName: Block> <tileData: int>
+        /connect <serverUri: text>
+        /daylock [true|false]
+        /effect <player: target> clear
+        /effect <player: target> <effect: Effect> [seconds: int] [amplifier: int] [true|false]
+        /execute <origin: target> <position: x y z> detect <detectPos: x y z> <block: Block> <data: int> <command: command>
+        /fill <from: x y z> <to: x y z> <tileName: Block> [tileData: int] [outline|hollow|destroy|keep]
+        /fill <from: x y z> <to: x y z> <tileName: Block> <tileData: int> replace [replaceTileName: Block] [replaceDataValue: int]
+        /gamerule
+        /gamerule <rule: BoolGameRule> [true|false]
+        /help [command: CommandName]
+        /help <page: int>
+        /list
+        /msg <target: target> <message: message>
+        /playsound <sound: string> [player: target] [position: x y z] [volume: float] [pitch: float] [minimumVolume: float]
+        /replaceitem block <position: x y z> slot.container <slotId: int> <itemName: Item> [amount: int] [data: int] [components: json]
+        /replaceitem entity <target: target> <slotType: EntityEquipmentSlot> <slotId: int> <itemName: Item> [amount: int] [data: int] [components: json]
+        /setblock <position: x y z> <tileName: Block> [tileData: int] [replace|destroy|keep]
+        /teleport <destination: x y z> [yRot: value] [xRot: value]
+        /teleport <destination: x y z> facing <lookAtPosition: x y z>
+        /teleport <destination: x y z> facing <lookAtEntity: target>
+        /teleport <victim: target> <destination: x y z> [yRot: value] [xRot: value]
+        /teleport <victim: target> <destination: x y z> facing <lookAtPosition: x y z>
+        /teleport <victim: target> <destination: x y z> facing <lookAtEntity: target>
+        /teleport <destination: target>
+        /teleport <victim: target> <destination: target>
+        /testforblocks <begin: x y z> <end: x y z> <destination: x y z> [masked|all]
+        /tickingarea add <from: x y z> <to: x y z> [name: string]
+        /tickingarea add circle <center: x y z> <radius: int> [name: string]
+        /tickingarea remove <position: x y z>
+        /tickingarea remove <name: string>
+        /tickingarea remove_all
+        /tickingarea list [all-dimensions]
+        /time query <daytime|gametime|day>
+        /title <player: target> clear
+        /title <player: target> reset
+        /title <player: target> <title|subtitle|actionbar> <titleText: message>
+        /title <player: target> times <fadeIn: int> <stay: int> <fadeOut: int>
+        /toggledownfall
+        /tp <destination: x y z> [yRot: value] [xRot: value]
+        /tp <destination: x y z> facing <lookAtPosition: x y z>
+        /tp <destination: x y z> facing <lookAtEntity: target>
+        /tp <victim: target> <destination: x y z> [yRot: value] [xRot: value]
+        /tp <victim: target> <destination: x y z> facing <lookAtPosition: x y z>
+        /tp <victim: target> <destination: x y z> facing <lookAtEntity: target>
+        /w <target: target> <message: message>
+        /weather <clear|rain|thunder> [duration: int]
+        /weather query
+        /xp <amount: int> [player: target]
+        /xp <amount: int>L [player: target]
+      removed: |
+        /clone <begin: x y z> <end: x y z> <destination: x y z> [maskMode: string] [cloneMode: string] [tileName: string] [tileData: int]
+        /closewebsocket 
+        /effect <player: target> <clear: string>
+        /effect <player: target> <effect: string> [seconds: int] [amplifier: int] [hideParticles: bool]
+        /enableencryption <publicKey: string> <salt: string>
+        /execute <origin: target> <position: x y z> <detect: string> <detectPos: x y z> <detectBlock: string> <detectData: int> <command: string>
+        /executeasself <command: string>
+        /fill <from: x y z> <to: x y z> <tileName: string> <tileData: int> <oldBlockHandling: string> <replaceTileName: string> <replaceDataValue: int>
+        /fill <from: x y z> <to: x y z> <tileName: string> [tileData: int] [oldBlockHandling: string]
+        /gamerule <rule: string> <value: bool>
+        /gamerule <rule: string> <value: int>
+        /gamerule [rule: string]
+        /getlocalplayername 
+        /help <command: string>
+        /help [page: int]
+        /list 
+        /listd [details: string]
+        /playsound <sound: string> <player: target> [position: x y z] [volume: float] [pitch: float] [minimumVolume: float]
+        /replaceitem <block: string> <position: x y z> <slotType: string> <slotId: int> <itemName: string> [amount: int] [data: int] [components: components]
+        /replaceitem <entity: string> <target: target> <slotType: string> <slotId: int> <itemName: string> [amount: int] [data: int] [components: components]
+        /setblock <position: x y z> <tileName: string> [tileData: int] [oldBlockHandling: string]
+        /testforblocks <begin: x y z> <end: x y z> <destination: x y z> [mode: string]
+        /time query <time: string>
+        /title <player: target> <actionbar: string> <titleText: string>
+        /title <player: target> <clear: string>
+        /title <player: target> <reset: string>
+        /title <player: target> <subtitle: string> <titleText: string>
+        /title <player: target> <times: string> <fadeIn: int> <stay: int> <fadeOut: int>
+        /title <player: target> <title: string> <titleText: string>
+        /toggledownfall 
+        /tp <destination: x y z> [y-rot: rotation] [x-rot: rotation]
+        /tp <victim: target> <destination: x y z> [y-rot: rotation] [x-rot: rotation]
+        /transferserver <server: string> <port: int>
+        /weather <type: string> [duration: int]
+        /xp <amount: int> <player: target>
+        /xp <amount: int>L <player: target>
+  1.2.5.52:
+    vanilla:
+      added: |
+        /mixer <stop: string>
+        /mixer <scene: string> <sceneName: string>
+        /mixer <start: string> <version: int> [shareCode: string]
+  1.4.1.0:
+    vanilla:
+      added:
+        - "/gamerule maxcommandchainlength [value: int]"
+  1.5.1.2:
+    education:
+      added: |
+        /ability <player: target> <mayfly|mute|worldbuilder> <true|false>
+        /ability <player: target> [mayfly|mute|worldbuilder]
+        /immutableworld [true|false]
+        /wb
+        /worldbuilder
+  1.8.1.2:
+    vanilla:
+      renamed:
+        - old: "/gamerule <rule: BoolGameRule> [true|false]"
+          new: "/gamerule <rule: string> [true|false]"
+      added: |
+        /function <name: unknown>
+        /function <name: string>
+        /gamerule <rule: string> [value: int]
+        /particle <effect: string> <position: x y z>
+        /reload
+        /scoreboard objectives add <objective: string> dummy [displayName: string]
+        /scoreboard objectives remove <objective: string>
+        /scoreboard objectives list
+        /scoreboard objectives setdisplay <list|sidebar> [objective: string] [ascending|descending]
+        /scoreboard objectives setdisplay belowname [objective: string]
+        /scoreboard players list [playername: target]
+        /scoreboard players reset <player: target> [objective: string]
+        /scoreboard players test <player: target> <objective: string> <min: wildcard int> [max: wildcard int]
+        /scoreboard players random <player: target> <objective: string> <min: int> <max: int>
+        /scoreboard players <add|remove|set> <player: target> <objective: string> <count: int>
+        /scoreboard players operation <targetName: target> <targetObjective: string> <operation: operator> <selector: target> <objective: string>
+      removed:
+        - "/gamerule maxcommandchainlength [value: int]"
+  1.11.1.2:
+    vanilla:
+      renamed:
+        - old: "/gamerule <rule: string> [true|false]"
+          new: "/gamerule <rule: BoolGameRule> [true|false]"
+        - old: "/function <name: unknown>"
+          new: "/function <name: filepath>"
+        - old: "/gamerule <rule: string> [value: int]"
+          new: "/gamerule <rule: IntGameRule> [value: int]"
+        - old: "/scoreboard players <add|remove|set> <player: target> <objective: string> <count: int>"
+          new: "/scoreboard players <set|add|remove> <player: target> <objective: string> <count: int>"
+      added: |
+        /mobevent <minecraft:pillager_patrols_event|minecraft:wandering_trader_event|events_enabled> [true|false]
+        /tag <entity: target> <add|remove> <name: string>
+        /tag <entity: target> list
+        /tellraw <target: target> <raw json message: json>
+        /titleraw <player: target> clear
+        /titleraw <player: target> reset
+        /titleraw <player: target> <title|subtitle|actionbar> <raw json titleText: json>
+        /titleraw <player: target> times <fadeIn: int> <stay: int> <fadeOut: int>
+        /videostream <serverUri: string> <screenshotSendFrequency: value>
+        /videostreamaction <none|close>
+  1.12.1.1:
+    vanilla:
+      added:
+        - "/videostream <serverUri: string> <screenshotSendFrequency: value> <desiredResolutionX: int> <desiredResolutionY: int>"
+      removed:
+        - "/summon <entityType: EntityType> [spawnPos: x y z]"
+      exclusiveAdded:
+        - "/summon <entityType: EntityType> [spawnPos: x y z] [spawnEvent: string]"
+  1.13.1.5:
+    vanilla:
+      added: |
+        /alwaysday [lock: Boolean]
+        /clone <begin: x y z> <end: x y z> <destination: x y z> [maskMode: MaskMode] [cloneMode: CloneMode]
+        /clone <begin: x y z> <end: x y z> <destination: x y z> filtered <cloneMode: CloneMode> <tileName: Block> <tileData: int>
+        /daylock [lock: Boolean]
+        /effect <player: target> <effect: Effect> [seconds: int] [amplifier: int] [hideParticles: Boolean]
+        /fill <from: x y z> <to: x y z> <tileName: Block> [tileData: int] [oldBlockHandling: FillMode]
+        /gamerule <rule: BoolGameRule> [value: Boolean]
+        /mobevent <event: MobEvent> [value: Boolean]
+        /summon <entityType: EntityType> [spawnPos: x y z] [spawnEvent: string] [nameTag: string]
+        /summon <entityType: EntityType> <nameTag: string> [spawnPos: x y z]
+        /teleport <destination: x y z> [checkForBlocks: Boolean]
+        /teleport <destination: x y z> [yRot: value] [xRot: value] [checkForBlocks: Boolean]
+        /teleport <destination: x y z> facing <lookAtPosition: x y z> [checkForBlocks: Boolean]
+        /teleport <destination: x y z> facing <lookAtEntity: target> [checkForBlocks: Boolean]
+        /teleport <victim: target> <destination: x y z> [yRot: value] [xRot: value] [checkForBlocks: Boolean]
+        /teleport <victim: target> <destination: x y z> [checkForBlocks: Boolean]
+        /teleport <victim: target> <destination: x y z> facing <lookAtPosition: x y z> [checkForBlocks: Boolean]
+        /teleport <victim: target> <destination: x y z> facing <lookAtEntity: target> [checkForBlocks: Boolean]
+        /teleport <destination: target> [checkForBlocks: Boolean]
+        /teleport <victim: target> <destination: target> [checkForBlocks: Boolean]
+        /tickingarea list [all-dimensions: AllDimensions]
+        /time query <time: TimeQuery>
+        /titleraw <player: target> <titleLocation: TitleRawSet> <raw json titleText: json>
+        /tp <destination: x y z> [checkForBlocks: Boolean]
+        /tp <destination: x y z> [yRot: value] [xRot: value] [checkForBlocks: Boolean]
+        /tp <destination: x y z> facing <lookAtPosition: x y z> [checkForBlocks: Boolean]
+        /tp <destination: x y z> facing <lookAtEntity: target> [checkForBlocks: Boolean]
+        /tp <victim: target> <destination: x y z> [yRot: value] [xRot: value] [checkForBlocks: Boolean]
+        /tp <victim: target> <destination: x y z> [checkForBlocks: Boolean]
+        /tp <victim: target> <destination: x y z> facing <lookAtPosition: x y z> [checkForBlocks: Boolean]
+        /tp <victim: target> <destination: x y z> facing <lookAtEntity: target> [checkForBlocks: Boolean]
+        /tp <destination: target> [checkForBlocks: Boolean]
+        /tp <victim: target> <destination: target> [checkForBlocks: Boolean]
+        /videostreamaction <action: VideoStreamAction>
+      removed: |
+        /alwaysday [true|false]
+        /clone <begin: x y z> <end: x y z> <destination: x y z> [replace|masked] [normal|force|move]
+        /clone <begin: x y z> <end: x y z> <destination: x y z> filtered <normal|force|move> <tileName: Block> <tileData: int>
+        /daylock [true|false]
+        /effect <player: target> <effect: Effect> [seconds: int] [amplifier: int] [true|false]
+        /fill <from: x y z> <to: x y z> <tileName: Block> [tileData: int] [outline|hollow|destroy|keep]
+        /function <name: string>
+        /gamerule <rule: BoolGameRule> [true|false]
+        /mobevent <minecraft:pillager_patrols_event|minecraft:wandering_trader_event|events_enabled> [true|false]
+        /teleport <destination: x y z> [yRot: value] [xRot: value]
+        /teleport <destination: x y z> facing <lookAtPosition: x y z>
+        /teleport <destination: x y z> facing <lookAtEntity: target>
+        /teleport <victim: target> <destination: x y z> [yRot: value] [xRot: value]
+        /teleport <victim: target> <destination: x y z> facing <lookAtPosition: x y z>
+        /teleport <victim: target> <destination: x y z> facing <lookAtEntity: target>
+        /teleport <destination: target>
+        /teleport <victim: target> <destination: target>
+        /tickingarea list [all-dimensions]
+        /time query <daytime|gametime|day>
+        /titleraw <player: target> <title|subtitle|actionbar> <raw json titleText: json>
+        /tp <destination: x y z> [yRot: value] [xRot: value]
+        /tp <destination: x y z> facing <lookAtPosition: x y z>
+        /tp <destination: x y z> facing <lookAtEntity: target>
+        /tp <victim: target> <destination: x y z> [yRot: value] [xRot: value]
+        /tp <victim: target> <destination: x y z> facing <lookAtPosition: x y z>
+        /tp <victim: target> <destination: x y z> facing <lookAtEntity: target>
+        /tp <destination: target>
+        /tp <victim: target> <destination: target>
+        /videostreamaction <none|close>
+    education:
+      added: |
+        /ability <player: target> <ability: Ability> <value: Boolean>
+        /ability <player: target> [ability: Ability]
+        /immutableworld [value: Boolean]
+      removed: |
+        /ability <player: target> <mayfly|mute|worldbuilder> <true|false>
+        /ability <player: target> [mayfly|mute|worldbuilder]
+        /immutableworld [true|false]
+  1.16.1.02:
+    vanilla:
+      added: |
+        /kick <name: target> <reason: message>
+        /replaceitem block <position: x y z> slot.container <slotId: int> <oldItemHandling: ReplaceMode> <itemName: Item> [amount: int] [data: int] [components: json]
+        /replaceitem entity <target: target> <slotType: EntityEquipmentSlot> <slotId: int> <oldItemHandling: ReplaceMode> <itemName: Item> [amount: int] [data: int] [components: json]
+      removed: |
+        /videostream <serverUri: string> <screenshotSendFrequency: value>
+        /videostream <serverUri: string> <screenshotSendFrequency: value> <desiredResolutionX: int> <desiredResolutionY: int>
+        /videostreamaction <action: VideoStreamAction>
+  1.16.100.04:
+    vanilla:
+      renamed:
+        - old: "/scoreboard players <set|add|remove> <player: target> <objective: string> <count: int>"
+          new: "/scoreboard players <add|remove|set> <player: target> <objective: string> <count: int>"
+      added: |
+        /camerashake add <player: target> [intensity: float] [seconds: float] [shakeType: CameraShakeType]
+        /clearspawnpoint [player: target]
+        /event entity <target: target> <eventName: string>
+        /fog <victim: target> push <fogId: string> <userProvidedId: string>
+        /fog <victim: target> <mode: delete> <userProvidedId: string>
+        /music queue <trackName: string> [volume: float] [fadeSeconds: float] [repeatMode: MusicRepeatMode]
+        /music play <trackName: string> [volume: float] [fadeSeconds: float] [repeatMode: MusicRepeatMode]
+        /music stop [fadeSeconds: float]
+        /music volume <volume: float>
+        /playanimation <entity: target> <animation: string> [next_state: string] [blend_out_time: float] [stop_expression: string] [controller: string]
+        /ride <riders: target> start_riding <ride: target> [teleportRules: TeleportRules] [howToFill: FillType]
+        /ride <riders: target> stop_riding
+        /ride <rides: target> evict_riders
+        /ride <rides: target> summon_rider <entityType: EntityType> [spawnEvent: string] [nameTag: string]
+        /ride <riders: target> summon_ride <entityType: EntityType> [rideRules: RideRules] [spawnEvent: string] [nameTag: string]
+        /schedule on_area_loaded add <from: x y z> <to: x y z> <function: filepath>
+        /schedule on_area_loaded add circle <center: x y z> <radius: int> <function: filepath>
+        /schedule on_area_loaded add tickingarea <name: string> <function: filepath>
+        /structure save <name: string> <from: x y z> <to: x y z> [saveMode: StructureSaveMode]
+        /structure save <name: string> <from: x y z> <to: x y z> [includeEntities: Boolean] [saveMode: StructureSaveMode] [includeBlocks: Boolean]
+        /structure load <name: string> <to: x y z> [rotation: Rotation] [mirror: Mirror] [includeEntities: Boolean] [includeBlocks: Boolean] [integrity: float] [seed: string]
+        /structure load <name: string> <to: x y z> [rotation: Rotation] [mirror: Mirror] [animationMode: StructureAnimationMode] [animationSeconds: float] [includeEntities: Boolean] [includeBlocks: Boolean] [integrity: float] [seed: string]
+  1.16.210.05:
+    vanilla:
+      added: |
+        /camerashake stop [player: target]
+        /clone <begin: x y z> <end: x y z> <destination: x y z> filtered <cloneMode: CloneMode> <tileName: Block> <blockStates: block states>
+        /fill <from: x y z> <to: x y z> <tileName: Block> [blockStates: block states] [oldBlockHandling: FillMode]
+        /fill <from: x y z> <to: x y z> <tileName: Block> <blockStates: block states> replace [replaceTileName: Block] [replaceBlockStates: block states]
+        /setblock <position: x y z> <tileName: Block> [blockStates: block states] [replace|destroy|keep]
+        /structure delete <name: string>
+      removed: |
+        /mixer <stop: string>
+        /mixer <scene: string> <sceneName: string>
+        /mixer <start: string> <version: int> [shareCode: string]
+    experiment:
+      added: |
+        /gametest runthis
+        /gametest run <testName: GameTestName> [rotationSteps: int]
+        /gametest runall [tagTag: GameTestTag] [rotationSteps: int]
+        /gametest clearall [radius: int]
+        /gametest pos
+        /gametest create <testName: string> [width: int] [height: int] [depth: int]
+        /gametest runthese
+  1.16.220.02:
+    experiment:
+      added:
+        - "/gametest run <testName: GameTestName> <stopOnFailure: Boolean> <repeatCount: int> [rotationSteps: int]"
+  1.17.2.01:
+    experiment:
+      added:
+        - "/gametest runset [tag: GameTestTag] [rotationSteps: int]"
+      removed:
+        - "/gametest runall [tagTag: GameTestTag] [rotationSteps: int]"
+  1.17.10.04:
+    vanilla:
+      added: |
+        /dialogue change <npc: target> <sceneName: string> [players: target]
+        /dialogue open <npc: target> <player: target> [sceneName: string]
+  1.17.30.04:
+    vanilla:
+      added: |
+        /locate <feature: Feature> [useNewChunksOnly: Boolean]
+        /particle <effect: string> [position: x y z]
+      removed: |
+        /locate <feature: Feature>
+        /particle <effect: string> <position: x y z>
+    experiment:
+      added: |
+        /script debugger close
+        /script debugger connect <host: string> <port: int>
+        /script debugger listen <port: int>
+  1.18.1.02:
+    vanilla:
+      added:
+        - "/testforblock <position: x y z> <tileName: Block> [blockStates: block states]"
+  1.18.10.04:
+    vanilla:
+      added: |
+        /damage <target: target> <amount: int> <cause: DamageCause> entity <damager: target>
+        /damage <target: target> <amount: int> [cause: DamageCause]
+        /loot spawn <position: x y z> kill <entity: target> [<tool>|mainhand|offhand: string]
+        /loot spawn <position: x y z> loot <loot_table: string> [<tool>|mainhand|offhand: string]
+  1.18.30.04:
+    vanilla:
+      added: |
+        /loot give <players: target> kill <entity: target> [<tool>|mainhand|offhand: string]
+        /loot give <players: target> loot <loot_table: string> [<tool>|mainhand|offhand: string]
+        /loot insert <position: x y z> kill <entity: target> [<tool>|mainhand|offhand: string]
+        /loot insert <position: x y z> loot <loot_table: string> [<tool>|mainhand|offhand: string]
+        /tickingarea add <from: x y z> <to: x y z> [name: string] [preload: Boolean]
+        /tickingarea add circle <center: x y z> <radius: int> [name: string] [preload: Boolean]
+        /tickingarea preload <name: string> [preload: Boolean]
+        /tickingarea preload <position: x y z> [preload: Boolean]
+      removed: |
+        /tickingarea add <from: x y z> <to: x y z> [name: string]
+        /tickingarea add circle <center: x y z> <radius: int> [name: string]
+    experiment:
+      added: |
+        /gametest clearall
+        /volumearea add <identifier: string> <from: x y z> <to: x y z> [name: string]
+        /volumearea list [all-dimensions: VolumeAreaAllDimensions]
+        /volumearea remove <name: string>
+        /volumearea remove <position: x y z>
+        /volumearea remove_all
+      removed:
+        - "/gametest clearall [radius: int]"
+  1.19.2.02:
+    vanilla:
+      added: |
+        /loot replace entity <entity: target> <slotType: EntityEquipmentSlot> <slotId: int> <count: int> kill <entity: target> [<tool>|mainhand|offhand: string]
+        /loot replace entity <entity: target> <slotType: EntityEquipmentSlot> <slotId: int> <count: int> loot <loot_table: string> [<tool>|mainhand|offhand: string]
+        /loot replace entity <entity: target> <slotType: EntityEquipmentSlot> <slotId: int> kill <entity: target> [<tool>|mainhand|offhand: string]
+        /loot replace entity <entity: target> <slotType: EntityEquipmentSlot> <slotId: int> loot <loot_table: string> [<tool>|mainhand|offhand: string]
+    experiment:
+      renamed:
+        - old: "/gametest run <testName: GameTestName> <stopOnFailure: Boolean> <repeatCount: int> [rotationSteps: int]"
+          new: "/gametest run <testName: string> <stopOnFailure: Boolean> <repeatCount: int> [rotationSteps: int]"
+        - old: "/gametest run <testName: GameTestName> [rotationSteps: int]"
+          new: "/gametest run <testName: string> [rotationSteps: int]"
+        - old: "/gametest runset [tag: GameTestTag] [rotationSteps: int]"
+          new: "/gametest runset [tag: string] [rotationSteps: int]"
+      added: |
+        /script debugger connect [host: string] [port: int]
+        /script profiler start
+        /script profiler stop
+      removed:
+        - "/script debugger connect <host: string> <port: int>"
+  1.19.10.03:
+    vanilla:
+      renamed:
+        - old: "/locate <feature: Feature> [useNewChunksOnly: Boolean]"
+          new: "/locate <feature: Structure> [useNewChunksOnly: Boolean]"
+      added: |
+        /locate biome <biome: Biome>
+        /locate structure <structure: Structure> [useNewChunksOnly: Boolean]
+    experiment:
+      added: |
+        /execute <subcommand: Option_If_Unless> block <position: x y z> <block: Block> <blockStates: block states> [chainedCommand: ExecuteChainedOption_0]
+        /execute <subcommand: Option_If_Unless> block <position: x y z> <block: Block> <data: int> [chainedCommand: ExecuteChainedOption_0]
+        /execute <subcommand: Option_If_Unless> block <position: x y z> <block: Block> [chainedCommand: ExecuteChainedOption_0]
+        /execute <subcommand: Option_If_Unless> blocks <begin: x y z> <end: x y z> <destination: x y z> <scan mode: BlocksScanMode> [chainedCommand: ExecuteChainedOption_0]
+        /execute <subcommand: Option_If_Unless> entity <target: target> [chainedCommand: ExecuteChainedOption_0]
+        /execute <subcommand: Option_If_Unless> score <target: target> <objective: string> <operation: compare operator> <source: target> <objective: string> [chainedCommand: ExecuteChainedOption_0]
+        /execute <subcommand: Option_If_Unless> score <target: target> <objective: string> matches <range: integer range> [chainedCommand: ExecuteChainedOption_0]
+        /execute as <origin: target> <chainedCommand: ExecuteChainedOption_0>
+        /execute at <origin: target> <chainedCommand: ExecuteChainedOption_0>
+        /execute positioned <position: x y z> <chainedCommand: ExecuteChainedOption_0>
+        /execute positioned as <origin: target> <chainedCommand: ExecuteChainedOption_0>
+        /execute run <command: command>
+        -/execute <origin: target> <position: x y z> <command: command>
+        -/execute <origin: target> <position: x y z> detect <detectPos: x y z> <block: Block> <data: int> <command: command>
+  1.19.30.04:
+    vanilla:
+      added: |
+        /structure load <name: string> <to: x y z> [rotation: Rotation] [mirror: Mirror] [animationMode: StructureAnimationMode] [animationSeconds: float] [includeEntities: Boolean] [includeBlocks: Boolean] [waterlogged: Boolean] [integrity: float] [seed: string]
+        /structure load <name: string> <to: x y z> [rotation: Rotation] [mirror: Mirror] [includeEntities: Boolean] [includeBlocks: Boolean] [waterlogged: Boolean] [integrity: float] [seed: string]
+      removed: |
+        /locate <feature: Structure> [useNewChunksOnly: Boolean]
+        /structure load <name: string> <to: x y z> [rotation: Rotation] [mirror: Mirror] [animationMode: StructureAnimationMode] [animationSeconds: float] [includeEntities: Boolean] [includeBlocks: Boolean] [integrity: float] [seed: string]
+        /structure load <name: string> <to: x y z> [rotation: Rotation] [mirror: Mirror] [includeEntities: Boolean] [includeBlocks: Boolean] [integrity: float] [seed: string]
+    experiment:
+      added:
+        - /script watchdog exportstats
+  1.19.40.02:
+    vanilla:
+      added: |
+        /gametest clearall
+        /gametest create <testName: string> [width: int] [height: int] [depth: int]
+        /gametest pos
+        /gametest run <testName: string> <stopOnFailure: Boolean> <repeatCount: int> [rotationSteps: int]
+        /gametest run <testName: string> [rotationSteps: int]
+        /gametest runset [tag: string] [rotationSteps: int]
+        /gametest runthese
+        /gametest runthis
+        /loot replace block <position: x y z> slot.container <slotId: int> <count: int> kill <entity: target> [<tool>|mainhand|offhand: string]
+        /loot replace block <position: x y z> slot.container <slotId: int> <count: int> loot <loot_table: string> [<tool>|mainhand|offhand: string]
+        /loot replace block <position: x y z> slot.container <slotId: int> kill <entity: target> [<tool>|mainhand|offhand: string]
+        /loot replace block <position: x y z> slot.container <slotId: int> loot <loot_table: string> [<tool>|mainhand|offhand: string]
+    experiment:
+      added: |
+        /execute align <axes: string> <chainedCommand: ExecuteChainedOption_0>
+        /execute anchored <eyes|feet> <chainedCommand: ExecuteChainedOption_0>
+        /execute facing <position: x y z> <chainedCommand: ExecuteChainedOption_0>
+        /execute facing entity <origin: target> <eyes|feet> <chainedCommand: ExecuteChainedOption_0>
+        /execute in <dimension: Dimension> <chainedCommand: ExecuteChainedOption_0>
+        /execute rotated <yaw: value> <pitch: value> <chainedCommand: ExecuteChainedOption_0>
+        /execute rotated as <origin: target> <chainedCommand: ExecuteChainedOption_0>
+      removed: |
+        /gametest clearall
+        /gametest create <testName: string> [width: int] [height: int] [depth: int]
+        /gametest pos
+        /gametest run <testName: string> <stopOnFailure: Boolean> <repeatCount: int> [rotationSteps: int]
+        /gametest run <testName: string> [rotationSteps: int]
+        /gametest runset [tag: string] [rotationSteps: int]
+        /gametest runthese
+        /gametest runthis
+        /script debugger close
+        /script debugger connect [host: string] [port: int]
+        /script debugger listen <port: int>
+        /script profiler start
+        /script profiler stop
+        /script watchdog exportstats
+  1.19.50.02:
+    vanilla:
+      added: |
+        /execute <subcommand: Option_If_Unless> block <position: x y z> <block: Block> <blockStates: block states> [chainedCommand: ExecuteChainedOption_0]
+        /execute <subcommand: Option_If_Unless> block <position: x y z> <block: Block> <data: int> [chainedCommand: ExecuteChainedOption_0]
+        /execute <subcommand: Option_If_Unless> block <position: x y z> <block: Block> [chainedCommand: ExecuteChainedOption_0]
+        /execute <subcommand: Option_If_Unless> blocks <begin: x y z> <end: x y z> <destination: x y z> <scan mode: BlocksScanMode> [chainedCommand: ExecuteChainedOption_0]
+        /execute <subcommand: Option_If_Unless> entity <target: target> [chainedCommand: ExecuteChainedOption_0]
+        /execute <subcommand: Option_If_Unless> score <target: target> <objective: string> <operation: compare operator> <source: target> <objective: string> [chainedCommand: ExecuteChainedOption_0]
+        /execute <subcommand: Option_If_Unless> score <target: target> <objective: string> matches <range: integer range> [chainedCommand: ExecuteChainedOption_0]
+        /execute align <axes: string> <chainedCommand: ExecuteChainedOption_0>
+        /execute anchored <eyes|feet> <chainedCommand: ExecuteChainedOption_0>
+        /execute as <origin: target> <chainedCommand: ExecuteChainedOption_0>
+        /execute at <origin: target> <chainedCommand: ExecuteChainedOption_0>
+        /execute facing <position: x y z> <chainedCommand: ExecuteChainedOption_0>
+        /execute facing entity <origin: target> <eyes|feet> <chainedCommand: ExecuteChainedOption_0>
+        /execute in <dimension: Dimension> <chainedCommand: ExecuteChainedOption_0>
+        /execute positioned <position: x y z> <chainedCommand: ExecuteChainedOption_0>
+        /execute positioned as <origin: target> <chainedCommand: ExecuteChainedOption_0>
+        /execute rotated <yaw: value> <pitch: value> <chainedCommand: ExecuteChainedOption_0>
+        /execute rotated as <origin: target> <chainedCommand: ExecuteChainedOption_0>
+        /execute run <command: command>
+      removed: |
+        /execute <origin: target> <position: x y z> <command: command>
+        /execute <origin: target> <position: x y z> detect <detectPos: x y z> <block: Block> <data: int> <command: command>
+    experiment:
+      removed: |
+        /execute <subcommand: Option_If_Unless> block <position: x y z> <block: Block> <blockStates: block states> [chainedCommand: ExecuteChainedOption_0]
+        /execute <subcommand: Option_If_Unless> block <position: x y z> <block: Block> <data: int> [chainedCommand: ExecuteChainedOption_0]
+        /execute <subcommand: Option_If_Unless> block <position: x y z> <block: Block> [chainedCommand: ExecuteChainedOption_0]
+        /execute <subcommand: Option_If_Unless> blocks <begin: x y z> <end: x y z> <destination: x y z> <scan mode: BlocksScanMode> [chainedCommand: ExecuteChainedOption_0]
+        /execute <subcommand: Option_If_Unless> entity <target: target> [chainedCommand: ExecuteChainedOption_0]
+        /execute <subcommand: Option_If_Unless> score <target: target> <objective: string> <operation: compare operator> <source: target> <objective: string> [chainedCommand: ExecuteChainedOption_0]
+        /execute <subcommand: Option_If_Unless> score <target: target> <objective: string> matches <range: integer range> [chainedCommand: ExecuteChainedOption_0]
+        /execute align <axes: string> <chainedCommand: ExecuteChainedOption_0>
+        /execute anchored <eyes|feet> <chainedCommand: ExecuteChainedOption_0>
+        /execute as <origin: target> <chainedCommand: ExecuteChainedOption_0>
+        /execute at <origin: target> <chainedCommand: ExecuteChainedOption_0>
+        /execute facing <position: x y z> <chainedCommand: ExecuteChainedOption_0>
+        /execute facing entity <origin: target> <eyes|feet> <chainedCommand: ExecuteChainedOption_0>
+        /execute in <dimension: Dimension> <chainedCommand: ExecuteChainedOption_0>
+        /execute positioned <position: x y z> <chainedCommand: ExecuteChainedOption_0>
+        /execute positioned as <origin: target> <chainedCommand: ExecuteChainedOption_0>
+        /execute rotated <yaw: value> <pitch: value> <chainedCommand: ExecuteChainedOption_0>
+        /execute rotated as <origin: target> <chainedCommand: ExecuteChainedOption_0>
+        /execute run <command: command>
+        -/execute <origin: target> <position: x y z> <command: command>
+        -/execute <origin: target> <position: x y z> detect <detectPos: x y z> <block: Block> <data: int> <command: command>
+  1.19.60.03:
+    vanilla:
+      added: |
+        /script debugger close
+        /script debugger connect [host: string] [port: int]
+        /script debugger listen <port: int>
+        /script profiler start
+        /script profiler stop
+        /script watchdog exportstats
+    experiment:
+      added:
+        - "/scriptevent <messageId: string> <message: message>"
+  1.19.70.02:
+    vanilla:
+      added:
+        - "/summon <entityType: EntityType> [spawnPos: x y z] [yRot: value] [xRot: value] [spawnEvent: string] [nameTag: string]"
+      removed: |
+        /clone <begin: x y z> <end: x y z> <destination: x y z> filtered <cloneMode: CloneMode> <tileName: Block> <tileData: int>
+        /execute <subcommand: Option_If_Unless> block <position: x y z> <block: Block> <data: int> [chainedCommand: ExecuteChainedOption_0]
+        /fill <from: x y z> <to: x y z> <tileName: Block> <tileData: int> replace [replaceTileName: Block] [replaceDataValue: int]
+        /fill <from: x y z> <to: x y z> <tileName: Block> [tileData: int] [oldBlockHandling: FillMode]
+        /setblock <position: x y z> <tileName: Block> [tileData: int] [replace|destroy|keep]
+        /summon <entityType: EntityType> [spawnPos: x y z] [spawnEvent: string] [nameTag: string]
+        /testforblock <position: x y z> <tileName: Block> [dataValue: int]
+  1.19.80.02:
+    vanilla:
+      added: |
+        /clone <begin: x y z> <end: x y z> <destination: x y z> filtered <cloneMode: CloneMode> <tileName: Block> [blockStates: block states]
+        /fill <from: x y z> <to: x y z> <tileName: Block> <blockStates: block states> [oldBlockHandling: FillMode]
+        /fill <from: x y z> <to: x y z> <tileName: Block> [oldBlockHandling: FillMode]
+        /fill <from: x y z> <to: x y z> <tileName: Block> replace [replaceTileName: Block] [replaceBlockStates: block states]
+        /gametest runsetuntilfail [tag: string] [rotationSteps: int]
+        /gametest stopall
+        /inputpermission query <targets: target> <permission: permission> [state: state]
+        /inputpermission set <targets: target> <permission: permission> <state: state>
+        /setblock <position: x y z> <tileName: Block> <blockStates: block states> [replace|destroy|keep]
+        /setblock <position: x y z> <tileName: Block> [replace|destroy|keep]
+        /summon <entityType: EntityType> [spawnPos: x y z] facing <lookAtEntity: target> [spawnEvent: string] [nameTag: string]
+        /summon <entityType: EntityType> [spawnPos: x y z] facing <lookAtPosition: x y z> [spawnEvent: string] [nameTag: string]
+        /teleport <destination: target>
+        /tp <destination: target>
+      removed: |
+        /clone <begin: x y z> <end: x y z> <destination: x y z> filtered <cloneMode: CloneMode> <tileName: Block> <blockStates: block states>
+        /fill <from: x y z> <to: x y z> <tileName: Block> [blockStates: block states] [oldBlockHandling: FillMode]
+        /setblock <position: x y z> <tileName: Block> [blockStates: block states] [replace|destroy|keep]
+        /teleport <destination: target> [checkForBlocks: Boolean]
+        /tp <destination: target> [checkForBlocks: Boolean]
+  1.20.1.02:
+    experiment:
+      added: |
+        /camera <players: target> clear
+        /camera <players: target> fade
+        /camera <players: target> fade color <red: float> <green: float> <blue: float>
+        /camera <players: target> fade time <fadeInSeconds: float> <holdSeconds: float> <fadeOutSeconds: float>
+        /camera <players: target> fade time <fadeInSeconds: float> <holdSeconds: float> <fadeOutSeconds: float> color <red: float> <green: float> <blue: float>
+        /camera <players: target> set <preset: string> [default: default]
+        /camera <players: target> set <preset: string> ease <easeTime: float> <easeType: Easing> [default: default]
+        /camera <players: target> set <preset: string> ease <easeTime: float> <easeType: Easing> pos <position: x y z>
+        /camera <players: target> set <preset: string> ease <easeTime: float> <easeType: Easing> pos <position: x y z> rot <xRot: value> <yRot: value>
+        /camera <players: target> set <preset: string> ease <easeTime: float> <easeType: Easing> rot <xRot: value> <yRot: value>
+        /camera <players: target> set <preset: string> pos <position: x y z>
+        /camera <players: target> set <preset: string> pos <position: x y z> rot <xRot: value> <yRot: value>
+        /camera <players: target> set <preset: string> rot <xRot: value> <yRot: value>
+        /scoreboard players <set|add|remove> <player: target> <objective: string> <count: int>
+        -/scoreboard players <add|remove|set> <player: target> <objective: string> <count: int>
+  1.20.10.01:
+    experiment:
+      renamed:
+        - old: "/camera <players: target> fade color <red: float> <green: float> <blue: float>"
+          new: "/camera <players: target> fade color <red: int> <green: int> <blue: int>"
+        - old: "/camera <players: target> fade time <fadeInSeconds: float> <holdSeconds: float> <fadeOutSeconds: float> color <red: float> <green: float> <blue: float>"
+          new: "/camera <players: target> fade time <fadeInSeconds: float> <holdSeconds: float> <fadeOutSeconds: float> color <red: int> <green: int> <blue: int>"
+      added: |
+        /camera <players: target> set <preset: string> ease <easeTime: float> <easeType: Easing> facing <lookAtEntity: target>
+        /camera <players: target> set <preset: string> ease <easeTime: float> <easeType: Easing> facing <lookAtPosition: x y z>
+        /camera <players: target> set <preset: string> ease <easeTime: float> <easeType: Easing> pos <position: x y z> facing <lookAtEntity: target>
+        /camera <players: target> set <preset: string> ease <easeTime: float> <easeType: Easing> pos <position: x y z> facing <lookAtPosition: x y z>
+        /camera <players: target> set <preset: string> facing <lookAtEntity: target>
+        /camera <players: target> set <preset: string> facing <lookAtPosition: x y z>
+        /camera <players: target> set <preset: string> pos <position: x y z> facing <lookAtEntity: target>
+        /camera <players: target> set <preset: string> pos <position: x y z> facing <lookAtPosition: x y z>
+        /recipe <victim: target> give <recipe: string>
+        /recipe <victim: target> take <recipe: string>
+  1.20.30.02:
+    vanilla:
+      renamed:
+        - old: "/scoreboard players <add|remove|set> <player: target> <objective: string> <count: int>"
+          new: "/scoreboard players <set|add|remove> <player: target> <objective: string> <count: int>"
+      added: |
+        /camera <players: target> clear
+        /camera <players: target> fade
+        /camera <players: target> fade color <red: int> <green: int> <blue: int>
+        /camera <players: target> fade time <fadeInSeconds: float> <holdSeconds: float> <fadeOutSeconds: float>
+        /camera <players: target> fade time <fadeInSeconds: float> <holdSeconds: float> <fadeOutSeconds: float> color <red: int> <green: int> <blue: int>
+        /camera <players: target> set <preset: string> [default: default]
+        /camera <players: target> set <preset: string> ease <easeTime: float> <easeType: Easing> [default: default]
+        /camera <players: target> set <preset: string> ease <easeTime: float> <easeType: Easing> facing <lookAtEntity: target>
+        /camera <players: target> set <preset: string> ease <easeTime: float> <easeType: Easing> facing <lookAtPosition: x y z>
+        /camera <players: target> set <preset: string> ease <easeTime: float> <easeType: Easing> pos <position: x y z>
+        /camera <players: target> set <preset: string> ease <easeTime: float> <easeType: Easing> pos <position: x y z> facing <lookAtEntity: target>
+        /camera <players: target> set <preset: string> ease <easeTime: float> <easeType: Easing> pos <position: x y z> facing <lookAtPosition: x y z>
+        /camera <players: target> set <preset: string> ease <easeTime: float> <easeType: Easing> pos <position: x y z> rot <xRot: value> <yRot: value>
+        /camera <players: target> set <preset: string> ease <easeTime: float> <easeType: Easing> rot <xRot: value> <yRot: value>
+        /camera <players: target> set <preset: string> facing <lookAtEntity: target>
+        /camera <players: target> set <preset: string> facing <lookAtPosition: x y z>
+        /camera <players: target> set <preset: string> pos <position: x y z>
+        /camera <players: target> set <preset: string> pos <position: x y z> facing <lookAtEntity: target>
+        /camera <players: target> set <preset: string> pos <position: x y z> facing <lookAtPosition: x y z>
+        /camera <players: target> set <preset: string> pos <position: x y z> rot <xRot: value> <yRot: value>
+        /camera <players: target> set <preset: string> rot <xRot: value> <yRot: value>
+        /recipe give <player: target> <recipe: string>
+        /recipe take <player: target> <recipe: string>
+        /scriptevent <messageId: string> <message: message>
+    education:
+      added: |
+        -/recipe give <player: target> <recipe: string>
+        -/recipe take <player: target> <recipe: string>
+    experiment:
+      removed: |
+        /camera <players: target> clear
+        /camera <players: target> fade
+        /camera <players: target> fade color <red: int> <green: int> <blue: int>
+        /camera <players: target> fade time <fadeInSeconds: float> <holdSeconds: float> <fadeOutSeconds: float>
+        /camera <players: target> fade time <fadeInSeconds: float> <holdSeconds: float> <fadeOutSeconds: float> color <red: int> <green: int> <blue: int>
+        /camera <players: target> set <preset: string> [default: default]
+        /camera <players: target> set <preset: string> ease <easeTime: float> <easeType: Easing> [default: default]
+        /camera <players: target> set <preset: string> ease <easeTime: float> <easeType: Easing> facing <lookAtEntity: target>
+        /camera <players: target> set <preset: string> ease <easeTime: float> <easeType: Easing> facing <lookAtPosition: x y z>
+        /camera <players: target> set <preset: string> ease <easeTime: float> <easeType: Easing> pos <position: x y z>
+        /camera <players: target> set <preset: string> ease <easeTime: float> <easeType: Easing> pos <position: x y z> facing <lookAtEntity: target>
+        /camera <players: target> set <preset: string> ease <easeTime: float> <easeType: Easing> pos <position: x y z> facing <lookAtPosition: x y z>
+        /camera <players: target> set <preset: string> ease <easeTime: float> <easeType: Easing> pos <position: x y z> rot <xRot: value> <yRot: value>
+        /camera <players: target> set <preset: string> ease <easeTime: float> <easeType: Easing> rot <xRot: value> <yRot: value>
+        /camera <players: target> set <preset: string> facing <lookAtEntity: target>
+        /camera <players: target> set <preset: string> facing <lookAtPosition: x y z>
+        /camera <players: target> set <preset: string> pos <position: x y z>
+        /camera <players: target> set <preset: string> pos <position: x y z> facing <lookAtEntity: target>
+        /camera <players: target> set <preset: string> pos <position: x y z> facing <lookAtPosition: x y z>
+        /camera <players: target> set <preset: string> pos <position: x y z> rot <xRot: value> <yRot: value>
+        /camera <players: target> set <preset: string> rot <xRot: value> <yRot: value>
+        /recipe <victim: target> give <recipe: string>
+        /recipe <victim: target> take <recipe: string>
+        /scoreboard players <set|add|remove> <player: target> <objective: string> <count: int>
+        /scriptevent <messageId: string> <message: message>
+        -/scoreboard players <add|remove|set> <player: target> <objective: string> <count: int>
+  1.20.50.03:
+    education:
+      removed: |
+        -/recipe give <player: target> <recipe: string>
+        -/recipe take <player: target> <recipe: string>
+  1.20.60.04:
+    experiment:
+      added:
+        - "/hud <target: target> <visible: HudVisibility> [hud_element: HudElement]"
+  1.20.80.05:
+    vanilla:
+      added:
+        - "/hud <target: target> <visible: HudVisibility> [hud_element: HudElement]"
+    experiment:
+      removed:
+        - "/hud <target: target> <visible: HudVisibility> [hud_element: HudElement]"
+  1.21.20.03:
+    vanilla:
+      renamed:
+        - old: "/locate structure <structure: Structure> [useNewChunksOnly: Boolean]"
+          new: "/locate structure <structure: string> [useNewChunksOnly: Boolean]"
+      added:
+        - "/spreadplayers <x: value> <z: value> <spreadDistance: float> <maxRange: float> <victim: target> [maxHeight: value]"
+      removed:
+        - "/spreadplayers <x: value> <z: value> <spreadDistance: float> <maxRange: float> <victim: target>"
+    experiment:
+      added: |
+        /camera <players: target> remove_target
+        /camera <players: target> set <preset: string> rot <xRot: value> <yRot: value> view_offset <xViewOffset: float> <yViewOffset: float>
+        /camera <players: target> set <preset: string> view_offset <xViewOffset: float> <yViewOffset: float>
+        /camera <players: target> target_entity <entity: target>
+        /camera <players: target> target_entity <entity: target> target_center_offset <xTargetCenterOffset: float> <yTargetCenterOffset: float> <zTargetCenterOffset: float>
+      removed: |
+        /volumearea add <identifier: string> <from: x y z> <to: x y z> [name: string]
+        /volumearea list [all-dimensions: VolumeAreaAllDimensions]
+        /volumearea remove <name: string>
+        /volumearea remove <position: x y z>
+        /volumearea remove_all
+  1.21.30.03:
+    vanilla:
+      added:
+        - "/reload [all: reload_all]"
+      removed:
+        - /reload
+  1.21.40.04:
+    vanilla:
+      added: |
+        /camera <players: target> set <preset: string> entity_offset <xEntityOffset: float> <yEntityOffset: float> <zEntityOffset: float>
+        /camera <players: target> set <preset: string> rot <xRot: value> <yRot: value> entity_offset <xEntityOffset: float> <yEntityOffset: float> <zEntityOffset: float>
+        /camera <players: target> set <preset: string> rot <xRot: value> <yRot: value> view_offset <xViewOffset: float> <yViewOffset: float>
+        /camera <players: target> set <preset: string> rot <xRot: value> <yRot: value> view_offset <xViewOffset: float> <yViewOffset: float> entity_offset <xEntityOffset: float> <yEntityOffset: float> <zEntityOffset: float>
+        /camera <players: target> set <preset: string> view_offset <xViewOffset: float> <yViewOffset: float>
+        /camera <players: target> set <preset: string> view_offset <xViewOffset: float> <yViewOffset: float> entity_offset <xEntityOffset: float> <yEntityOffset: float> <zEntityOffset: float>
+        /effect <player: target> <effect: Effect> infinite [amplifier: int] [hideParticles: Boolean]
+        /effect <player: target> clear [effect: Effect]
+        /schedule clear <function: filepath>
+        /schedule on_area_loaded clear function <function: filepath>
+        /schedule on_area_loaded clear tickingarea <name: string> [function: filepath]
+      removed:
+        - "/effect <player: target> clear"
+    experiment:
+      removed: |
+        /camera <players: target> set <preset: string> rot <xRot: value> <yRot: value> view_offset <xViewOffset: float> <yViewOffset: float>
+        /camera <players: target> set <preset: string> view_offset <xViewOffset: float> <yViewOffset: float>
+  1.21.50.07:
+    vanilla:
+      added: |
+        /schedule delay add <function: filepath> <time: int> [replace|append]
+        /schedule delay add <function: filepath> <time: int>D [replace|append]
+        /schedule delay add <function: filepath> <time: int>S [replace|append]
+        /schedule delay add <function: filepath> <time: int>T [replace|append]
+        /schedule delay clear <function: filepath>
+    experiment:
+      added: |
+        /aimassist <players: target> clear
+        /aimassist <players: target> set [x angle: float] [y angle: float] [max distance: float] [target mode: AimAssistTargetMode] [preset id: string]
+        /loot give <players: target> mine <TargetBlockPosition: x y z> [<tool>|mainhand|offhand: string]
+        /loot insert <position: x y z> mine <TargetBlockPosition: x y z> [<tool>|mainhand|offhand: string]
+        /loot replace block <position: x y z> slot.container <slotId: int> <count: int> mine <TargetBlockPosition: x y z> [<tool>|mainhand|offhand: string]
+        /loot replace block <position: x y z> slot.container <slotId: int> mine <TargetBlockPosition: x y z> [<tool>|mainhand|offhand: string]
+        /loot replace entity <entity: target> <slotType: EntityEquipmentSlot> <slotId: int> <count: int> mine <TargetBlockPosition: x y z> [<tool>|mainhand|offhand: string]
+        /loot replace entity <entity: target> <slotType: EntityEquipmentSlot> <slotId: int> mine <TargetBlockPosition: x y z> [<tool>|mainhand|offhand: string]
+        /loot spawn <position: x y z> mine <TargetBlockPosition: x y z> [<tool>|mainhand|offhand: string]
+        /place jigsaw <pool: filepath> <jigsawTarget: string> <maxDepth: int> [pos: x y z] [keepJigsaws: Boolean]
+        /place structure <structure: string> [pos: x y z] [ignoreStartHeight: Boolean] [keepJigsaws: Boolean]
+  1.21.60.10:
+    vanilla:
+      added: |
+        /camera <players: target> remove_target
+        /camera <players: target> target_entity <entity: target>
+        /camera <players: target> target_entity <entity: target> target_center_offset <xTargetCenterOffset: float> <yTargetCenterOffset: float> <zTargetCenterOffset: float>
+        /loot give <players: target> mine <TargetBlockPosition: x y z> [<tool>|mainhand|offhand: string]
+        /loot insert <position: x y z> mine <TargetBlockPosition: x y z> [<tool>|mainhand|offhand: string]
+        /loot replace block <position: x y z> slot.container <slotId: int> <count: int> mine <TargetBlockPosition: x y z> [<tool>|mainhand|offhand: string]
+        /loot replace block <position: x y z> slot.container <slotId: int> mine <TargetBlockPosition: x y z> [<tool>|mainhand|offhand: string]
+        /loot replace entity <entity: target> <slotType: EntityEquipmentSlot> <slotId: int> <count: int> mine <TargetBlockPosition: x y z> [<tool>|mainhand|offhand: string]
+        /loot replace entity <entity: target> <slotType: EntityEquipmentSlot> <slotId: int> mine <TargetBlockPosition: x y z> [<tool>|mainhand|offhand: string]
+        /loot spawn <position: x y z> mine <TargetBlockPosition: x y z> [<tool>|mainhand|offhand: string]
+        /script diagnostics startcapture
+        /script diagnostics stopcapture
+      removed:
+        - /script watchdog exportstats
+    experiment:
+      added: |
+        /place feature <feature: features> [position: x y z]
+        /place featurerule <featurerule: featureRules> [position: x y z]
+        /place jigsaw <pool: filepath> <jigsawTarget: string> <maxDepth: int> [pos: x y z] [keepJigsaws: Boolean] [includeEntities: Boolean]
+        /place structure <structure: string> [pos: x y z] [ignoreStartHeight: Boolean] [keepJigsaws: Boolean] [includeEntities: Boolean]
+      removed: |
+        /camera <players: target> remove_target
+        /camera <players: target> target_entity <entity: target>
+        /camera <players: target> target_entity <entity: target> target_center_offset <xTargetCenterOffset: float> <yTargetCenterOffset: float> <zTargetCenterOffset: float>
+        /loot give <players: target> mine <TargetBlockPosition: x y z> [<tool>|mainhand|offhand: string]
+        /loot insert <position: x y z> mine <TargetBlockPosition: x y z> [<tool>|mainhand|offhand: string]
+        /loot replace block <position: x y z> slot.container <slotId: int> <count: int> mine <TargetBlockPosition: x y z> [<tool>|mainhand|offhand: string]
+        /loot replace block <position: x y z> slot.container <slotId: int> mine <TargetBlockPosition: x y z> [<tool>|mainhand|offhand: string]
+        /loot replace entity <entity: target> <slotType: EntityEquipmentSlot> <slotId: int> <count: int> mine <TargetBlockPosition: x y z> [<tool>|mainhand|offhand: string]
+        /loot replace entity <entity: target> <slotType: EntityEquipmentSlot> <slotId: int> mine <TargetBlockPosition: x y z> [<tool>|mainhand|offhand: string]
+        /loot spawn <position: x y z> mine <TargetBlockPosition: x y z> [<tool>|mainhand|offhand: string]
+        /place jigsaw <pool: filepath> <jigsawTarget: string> <maxDepth: int> [pos: x y z] [keepJigsaws: Boolean]
+        /place structure <structure: string> [pos: x y z] [ignoreStartHeight: Boolean] [keepJigsaws: Boolean]
+  1.21.70.03:
+    vanilla:
+      added: |
+        /aimassist <players: target> clear
+        /aimassist <players: target> set [x angle: float] [y angle: float] [max distance: float] [target mode: AimAssistTargetMode] [preset id: string]
+        /place feature <feature: features> [position: x y z]
+        /place featurerule <featurerule: featureRules> [position: x y z]
+    experiment:
+      removed: |
+        /aimassist <players: target> clear
+        /aimassist <players: target> set [x angle: float] [y angle: float] [max distance: float] [target mode: AimAssistTargetMode] [preset id: string]
+        /place feature <feature: features> [position: x y z]
+        /place featurerule <featurerule: featureRules> [position: x y z]
+  1.21.80.3:
+    vanilla:
+      added: |
+        /camera <players: target> set <preset: string> ease <easeTime: float> <easeType: Easing> entity_offset <xEntityOffset: float> <yEntityOffset: float> <zEntityOffset: float>
+        /camera <players: target> set <preset: string> ease <easeTime: float> <easeType: Easing> rot <xRot: value> <yRot: value> entity_offset <xEntityOffset: float> <yEntityOffset: float> <zEntityOffset: float>
+        /camera <players: target> set <preset: string> ease <easeTime: float> <easeType: Easing> rot <xRot: value> <yRot: value> view_offset <xViewOffset: float> <yViewOffset: float>
+        /camera <players: target> set <preset: string> ease <easeTime: float> <easeType: Easing> rot <xRot: value> <yRot: value> view_offset <xViewOffset: float> <yViewOffset: float> entity_offset <xEntityOffset: float> <yEntityOffset: float> <zEntityOffset: float>
+        /camera <players: target> set <preset: string> ease <easeTime: float> <easeType: Easing> view_offset <xViewOffset: float> <yViewOffset: float>
+        /camera <players: target> set <preset: string> ease <easeTime: float> <easeType: Easing> view_offset <xViewOffset: float> <yViewOffset: float> entity_offset <xEntityOffset: float> <yEntityOffset: float> <zEntityOffset: float>
+        /place jigsaw <pool: filepath> <jigsawTarget: string> <maxDepth: int> [pos: x y z] [keepJigsaws: Boolean] [includeEntities: Boolean]
+        /place structure <structure: string> [pos: x y z] [ignoreStartHeight: Boolean] [keepJigsaws: Boolean] [includeEntities: Boolean]
+    experiment:
+      added: |
+        /controlscheme <players: target> clear
+        /controlscheme <players: target> set <control scheme: controlscheme>
+      removed: |
+        /place jigsaw <pool: filepath> <jigsawTarget: string> <maxDepth: int> [pos: x y z] [keepJigsaws: Boolean] [includeEntities: Boolean]
+        /place structure <structure: string> [pos: x y z] [ignoreStartHeight: Boolean] [keepJigsaws: Boolean] [includeEntities: Boolean]
+  1.21.90.3:
+    vanilla:
+      added: |
+        /controlscheme <players: target> clear
+        /controlscheme <players: target> set <control scheme: controlscheme>
+        /place jigsaw <pool: filepath> <jigsawTarget: string> <maxDepth: int> [pos: x y z] [keepJigsaws: Boolean] [includeEntities: Boolean] [liquidSettings: LiquidSettings]
+        /place structure <structure: string> [pos: x y z] [ignoreStartHeight: Boolean] [keepJigsaws: Boolean] [includeEntities: Boolean] [liquidSettings: LiquidSettings]
+      removed: |
+        /place jigsaw <pool: filepath> <jigsawTarget: string> <maxDepth: int> [pos: x y z] [keepJigsaws: Boolean] [includeEntities: Boolean]
+        /place structure <structure: string> [pos: x y z] [ignoreStartHeight: Boolean] [keepJigsaws: Boolean] [includeEntities: Boolean]
+    experiment:
+      removed: |
+        /controlscheme <players: target> clear
+        /controlscheme <players: target> set <control scheme: controlscheme>
+  1.21.100.6:
+    experiment:
+      added: |
+        /camera <players: target> fov_clear [fovEaseTime: float] [fovEaseType: Easing]
+        /camera <players: target> fov_set <fov_value: float> [fovEaseTime: float] [fovEaseType: Easing]
+commands:
+  vanilla:
+    - commands: |
+        /clone <begin: x y z> <end: x y z> <destination: x y z> [maskMode: string] [cloneMode: string] [tileName: string] [tileData: int]
+        /closewebsocket 
+        /execute <origin: target> <position: x y z> <detect: string> <detectPos: x y z> <detectBlock: string> <detectData: int> <command: string>
+        /help <command: string>
+        /help [page: int]
+        /listd [details: string]
+        /setblock <position: x y z> <tileName: string> [tileData: int] [oldBlockHandling: string]
+        /testforblocks <begin: x y z> <end: x y z> <destination: x y z> [mode: string]
+        /time query <time: string>
+        /toggledownfall 
+        /weather <type: string> [duration: int]
+        /xp <amount: int> <player: target>
+        /xp <amount: int>L <player: target>
+      changelog:
+        - min: 0.16.1.0
+          max: 1.1.1.51
+          exclusiveMax: 1.2.1.1
+    - commands: |
+        /deop <player: target>
+        /enchant <player: target> <enchantmentId: int> [level: int]
+        /enchant <player: target> <enchantmentName: string> [level: int]
+        /execute <origin: target> <position: x y z> <command: string>
+        /gamemode <gameMode: int> [player: target]
+        /gamemode <gameMode: string> [player: target]
+        /kill [target: target]
+        /op <player: target>
+        /say <message: string>
+        /setworldspawn [spawnPoint: x y z]
+        /spawnpoint [player: target] [spawnPos: x y z]
+        /tell <recipient: target> <message: string>
+        /testforblock <position: x y z> <tileName: string> [dataValue: int]
+        /time add <amount: int>
+        /time set <time: int>
+        /time set <time: string>
+        /tp <destination: x y z> [y-rot: int] [x-rot: int]
+        /tp <victim: target> <destination: x y z> [y-rot: int] [x-rot: int]
+        /wsserver <serverUri: string>
+      changelog:
+        - min: 0.16.1.0
+    - commands: |
+        /execute <command: string>
+        /list [details: string]
+        /summon <entityType: string> <spawnPos: x y z>
+      changelog:
+        - min: 0.16.1.0
+          max: 0.16.1.0
+          exclusiveMax: 1.0.2.1
+    - commands: |
+        /fill <from: x y z> <to: x y z> <tileName: string> [tileData: int] [oldBlockHandling: string] [replaceTileName: string] [replaceDataValue: int]
+        /give <player: target> <itemName: string> [amount: int] [data: int]
+      changelog:
+        - min: 0.16.1.0
+          max: 1.0.5.54
+          exclusiveMax: 1.1.1.51
+    - commands:
+        - "/tp <destination: target>"
+      changelog:
+        - min: 0.16.1.0
+          max: 1.12.1.1
+          exclusiveMax: 1.13.1.5
+        - min: 1.19.80.02
+    - commands:
+        - "/tp <victim: target> <destination: target>"
+      changelog:
+        - min: 0.16.1.0
+          max: 1.12.1.1
+          exclusiveMax: 1.13.1.5
+    - commands: |
+        /executeasself <command: string>
+        /list 
+      changelog:
+        - min: 1.0.2.1
+          max: 1.1.1.51
+          exclusiveMax: 1.2.1.1
+    - commands: |
+        /locate <feature: string>
+        /summon <entityType: string> [spawnPos: x y z]
+      changelog:
+        - min: 1.0.2.1
+    - commands:
+        - "/transferserver <server: string> <port: int>"
+      changelog:
+        - min: 1.0.3.12
+          max: 1.1.1.51
+          exclusiveMax: 1.2.1.1
+    - commands: |
+        /clear [player: target] [itemName: string] [data: int] [maxCount: int]
+        /difficulty <difficulty: int>
+        /difficulty <difficulty: string>
+        /me <action: string>
+        /spreadplayers <x: rotation> <z: rotation> <spreadDistance: float> <maxRange: float> <victim: target>
+        /stopsound <player: target> [sound: string]
+        /testfor <victim: target>
+      changelog:
+        - min: 1.0.5.54
+    - commands: |
+        /effect <player: target> <clear: string>
+        /effect <player: target> <effect: string> [seconds: int] [amplifier: int] [hideParticles: bool]
+        /gamerule <rule: string> <value: bool>
+        /gamerule <rule: string> <value: int>
+        /gamerule [rule: string]
+        /playsound <sound: string> <player: target> [position: x y z] [volume: float] [pitch: float] [minimumVolume: float]
+        /title <player: target> <actionbar: string> <titleText: string>
+        /title <player: target> <clear: string>
+        /title <player: target> <reset: string>
+        /title <player: target> <subtitle: string> <titleText: string>
+        /title <player: target> <times: string> <fadeIn: int> <stay: int> <fadeOut: int>
+        /title <player: target> <title: string> <titleText: string>
+      changelog:
+        - min: 1.0.5.54
+          max: 1.1.1.51
+          exclusiveMax: 1.2.1.1
+    - commands: |
+        /replaceitem <block: string> <position: x y z> <slotType: string> <slotId: int> <itemName: string> [amount: int] [data: int]
+        /replaceitem <entity: string> <target: target> <slotType: string> <slotId: int> <itemName: string> [amount: int] [data: int]
+      changelog:
+        - min: 1.0.5.54
+          max: 1.0.5.54
+          exclusiveMax: 1.1.1.51
+    - commands: |
+        /enableencryption <publicKey: string> <salt: string>
+        /fill <from: x y z> <to: x y z> <tileName: string> <tileData: int> <oldBlockHandling: string> <replaceTileName: string> <replaceDataValue: int>
+        /fill <from: x y z> <to: x y z> <tileName: string> [tileData: int] [oldBlockHandling: string]
+        /getlocalplayername 
+        /replaceitem <block: string> <position: x y z> <slotType: string> <slotId: int> <itemName: string> [amount: int] [data: int] [components: components]
+        /replaceitem <entity: string> <target: target> <slotType: string> <slotId: int> <itemName: string> [amount: int] [data: int] [components: components]
+      changelog:
+        - min: 1.1.1.51
+          max: 1.1.1.51
+          exclusiveMax: 1.2.1.1
+    - commands: |
+        /give <player: target> <itemName: string> [amount: int] [data: int] [components: components]
+        /setmaxplayers <maxPlayers: int>
+      changelog:
+        - min: 1.1.1.51
+    - commands: |
+        /? [command: CommandName]
+        /? <page: int>
+        /connect <serverUri: text>
+        /gamerule
+        /help [command: CommandName]
+        /help <page: int>
+        /list
+        /msg <target: target> <message: message>
+        /playsound <sound: string> [player: target] [position: x y z] [volume: float] [pitch: float] [minimumVolume: float]
+        /replaceitem block <position: x y z> slot.container <slotId: int> <itemName: Item> [amount: int] [data: int] [components: json]
+        /replaceitem entity <target: target> <slotType: EntityEquipmentSlot> <slotId: int> <itemName: Item> [amount: int] [data: int] [components: json]
+        /testforblocks <begin: x y z> <end: x y z> <destination: x y z> [masked|all]
+        /tickingarea remove <position: x y z>
+        /tickingarea remove <name: string>
+        /tickingarea remove_all
+        /title <player: target> clear
+        /title <player: target> reset
+        /title <player: target> <title|subtitle|actionbar> <titleText: message>
+        /title <player: target> times <fadeIn: int> <stay: int> <fadeOut: int>
+        /toggledownfall
+        /w <target: target> <message: message>
+        /weather <clear|rain|thunder> [duration: int]
+        /weather query
+        /xp <amount: int> [player: target]
+        /xp <amount: int>L [player: target]
+      changelog:
+        - min: 1.2.1.1
+    - commands: |
+        /alwaysday [true|false]
+        /clone <begin: x y z> <end: x y z> <destination: x y z> [replace|masked] [normal|force|move]
+        /clone <begin: x y z> <end: x y z> <destination: x y z> filtered <normal|force|move> <tileName: Block> <tileData: int>
+        /daylock [true|false]
+        /effect <player: target> <effect: Effect> [seconds: int] [amplifier: int] [true|false]
+        /fill <from: x y z> <to: x y z> <tileName: Block> [tileData: int] [outline|hollow|destroy|keep]
+        /gamerule <rule: BoolGameRule> [true|false]
+        /teleport <destination: x y z> [yRot: value] [xRot: value]
+        /teleport <destination: x y z> facing <lookAtPosition: x y z>
+        /teleport <destination: x y z> facing <lookAtEntity: target>
+        /teleport <victim: target> <destination: x y z> [yRot: value] [xRot: value]
+        /teleport <victim: target> <destination: x y z> facing <lookAtPosition: x y z>
+        /teleport <victim: target> <destination: x y z> facing <lookAtEntity: target>
+        /teleport <victim: target> <destination: target>
+        /tickingarea list [all-dimensions]
+        /time query <daytime|gametime|day>
+        /tp <destination: x y z> [yRot: value] [xRot: value]
+        /tp <destination: x y z> facing <lookAtPosition: x y z>
+        /tp <destination: x y z> facing <lookAtEntity: target>
+        /tp <victim: target> <destination: x y z> [yRot: value] [xRot: value]
+        /tp <victim: target> <destination: x y z> facing <lookAtPosition: x y z>
+        /tp <victim: target> <destination: x y z> facing <lookAtEntity: target>
+      changelog:
+        - min: 1.2.1.1
+          max: 1.12.1.1
+          exclusiveMax: 1.13.1.5
+    - commands:
+        - "/effect <player: target> clear"
+      changelog:
+        - min: 1.2.1.1
+          max: 1.21.30.03
+          exclusiveMax: 1.21.40.04
+    - commands:
+        - "/execute <origin: target> <position: x y z> detect <detectPos: x y z> <block: Block> <data: int> <command: command>"
+      changelog:
+        - min: 1.2.1.1
+          max: 1.19.40.02
+          exclusiveMax: 1.19.50.02
+    - commands: |
+        /fill <from: x y z> <to: x y z> <tileName: Block> <tileData: int> replace [replaceTileName: Block] [replaceDataValue: int]
+        /setblock <position: x y z> <tileName: Block> [tileData: int] [replace|destroy|keep]
+      changelog:
+        - min: 1.2.1.1
+          max: 1.19.60.03
+          exclusiveMax: 1.19.70.02
+    - commands:
+        - "/teleport <destination: target>"
+      changelog:
+        - min: 1.2.1.1
+          max: 1.12.1.1
+          exclusiveMax: 1.13.1.5
+        - min: 1.19.80.02
+    - commands: |
+        /tickingarea add <from: x y z> <to: x y z> [name: string]
+        /tickingarea add circle <center: x y z> <radius: int> [name: string]
+      changelog:
+        - min: 1.2.1.1
+          max: 1.18.10.04
+          exclusiveMax: 1.18.30.04
+    - commands: |
+        /tp <destination: x y z> [y-rot: rotation] [x-rot: rotation]
+        /tp <victim: target> <destination: x y z> [y-rot: rotation] [x-rot: rotation]
+      changelog:
+        - max: 1.1.1.51
+          exclusiveMax: 1.2.1.1
+    - commands: |
+        /mixer <stop: string>
+        /mixer <scene: string> <sceneName: string>
+        /mixer <start: string> <version: int> [shareCode: string]
+      changelog:
+        - min: 1.2.5.52
+          max: 1.16.100.04
+          exclusiveMax: 1.16.210.05
+    - commands:
+        - "/gamerule maxcommandchainlength [value: int]"
+      changelog:
+        - min: 1.4.1.0
+          max: 1.4.1.0
+          exclusiveMax: 1.8.1.2
+    - commands: |
+        /function <name: unknown>
+        /gamerule <rule: string> [value: int]
+        /scoreboard objectives add <objective: string> dummy [displayName: string]
+        /scoreboard objectives remove <objective: string>
+        /scoreboard objectives list
+        /scoreboard objectives setdisplay <list|sidebar> [objective: string] [ascending|descending]
+        /scoreboard objectives setdisplay belowname [objective: string]
+        /scoreboard players list [playername: target]
+        /scoreboard players reset <player: target> [objective: string]
+        /scoreboard players test <player: target> <objective: string> <min: wildcard int> [max: wildcard int]
+        /scoreboard players random <player: target> <objective: string> <min: int> <max: int>
+        /scoreboard players <add|remove|set> <player: target> <objective: string> <count: int>
+        /scoreboard players operation <targetName: target> <targetObjective: string> <operation: operator> <selector: target> <objective: string>
+      changelog:
+        - min: 1.8.1.2
+    - commands:
+        - "/function <name: string>"
+      changelog:
+        - min: 1.8.1.2
+          max: 1.12.1.1
+          exclusiveMax: 1.13.1.5
+    - commands:
+        - "/particle <effect: string> <position: x y z>"
+      changelog:
+        - min: 1.8.1.2
+          max: 1.17.10.04
+          exclusiveMax: 1.17.30.04
+    - commands:
+        - /reload
+      changelog:
+        - min: 1.8.1.2
+          max: 1.21.20.03
+          exclusiveMax: 1.21.30.03
+    - commands: |
+        /mobevent <minecraft:pillager_patrols_event|minecraft:wandering_trader_event|events_enabled> [true|false]
+        /titleraw <player: target> <title|subtitle|actionbar> <raw json titleText: json>
+        /videostreamaction <none|close>
+      changelog:
+        - min: 1.11.1.2
+          max: 1.12.1.1
+          exclusiveMax: 1.13.1.5
+    - commands: |
+        /tag <entity: target> <add|remove> <name: string>
+        /tag <entity: target> list
+        /tellraw <target: target> <raw json message: json>
+        /titleraw <player: target> clear
+        /titleraw <player: target> reset
+        /titleraw <player: target> times <fadeIn: int> <stay: int> <fadeOut: int>
+      changelog:
+        - min: 1.11.1.2
+    - commands:
+        - "/videostream <serverUri: string> <screenshotSendFrequency: value>"
+      changelog:
+        - min: 1.11.1.2
+          max: 1.13.1.5
+          exclusiveMax: 1.16.1.02
+    - commands:
+        - "/videostream <serverUri: string> <screenshotSendFrequency: value> <desiredResolutionX: int> <desiredResolutionY: int>"
+      changelog:
+        - min: 1.12.1.1
+          max: 1.13.1.5
+          exclusiveMax: 1.16.1.02
+    - commands:
+        - "/summon <entityType: EntityType> [spawnPos: x y z]"
+      changelog:
+        - max: 1.11.1.2
+          exclusiveMax: 1.12.1.1
+    - commands:
+        - "/summon <entityType: EntityType> [spawnPos: x y z] [spawnEvent: string]"
+      changelog:
+        - include: 1.12.1.1
+    - commands: |
+        /alwaysday [lock: Boolean]
+        /clone <begin: x y z> <end: x y z> <destination: x y z> [maskMode: MaskMode] [cloneMode: CloneMode]
+        /daylock [lock: Boolean]
+        /effect <player: target> <effect: Effect> [seconds: int] [amplifier: int] [hideParticles: Boolean]
+        /gamerule <rule: BoolGameRule> [value: Boolean]
+        /mobevent <event: MobEvent> [value: Boolean]
+        /summon <entityType: EntityType> <nameTag: string> [spawnPos: x y z]
+        /teleport <destination: x y z> [checkForBlocks: Boolean]
+        /teleport <destination: x y z> [yRot: value] [xRot: value] [checkForBlocks: Boolean]
+        /teleport <destination: x y z> facing <lookAtPosition: x y z> [checkForBlocks: Boolean]
+        /teleport <destination: x y z> facing <lookAtEntity: target> [checkForBlocks: Boolean]
+        /teleport <victim: target> <destination: x y z> [yRot: value] [xRot: value] [checkForBlocks: Boolean]
+        /teleport <victim: target> <destination: x y z> [checkForBlocks: Boolean]
+        /teleport <victim: target> <destination: x y z> facing <lookAtPosition: x y z> [checkForBlocks: Boolean]
+        /teleport <victim: target> <destination: x y z> facing <lookAtEntity: target> [checkForBlocks: Boolean]
+        /teleport <victim: target> <destination: target> [checkForBlocks: Boolean]
+        /tickingarea list [all-dimensions: AllDimensions]
+        /time query <time: TimeQuery>
+        /titleraw <player: target> <titleLocation: TitleRawSet> <raw json titleText: json>
+        /tp <destination: x y z> [checkForBlocks: Boolean]
+        /tp <destination: x y z> [yRot: value] [xRot: value] [checkForBlocks: Boolean]
+        /tp <destination: x y z> facing <lookAtPosition: x y z> [checkForBlocks: Boolean]
+        /tp <destination: x y z> facing <lookAtEntity: target> [checkForBlocks: Boolean]
+        /tp <victim: target> <destination: x y z> [yRot: value] [xRot: value] [checkForBlocks: Boolean]
+        /tp <victim: target> <destination: x y z> [checkForBlocks: Boolean]
+        /tp <victim: target> <destination: x y z> facing <lookAtPosition: x y z> [checkForBlocks: Boolean]
+        /tp <victim: target> <destination: x y z> facing <lookAtEntity: target> [checkForBlocks: Boolean]
+        /tp <victim: target> <destination: target> [checkForBlocks: Boolean]
+      changelog:
+        - min: 1.13.1.5
+    - commands: |
+        /clone <begin: x y z> <end: x y z> <destination: x y z> filtered <cloneMode: CloneMode> <tileName: Block> <tileData: int>
+        /fill <from: x y z> <to: x y z> <tileName: Block> [tileData: int] [oldBlockHandling: FillMode]
+        /summon <entityType: EntityType> [spawnPos: x y z] [spawnEvent: string] [nameTag: string]
+      changelog:
+        - min: 1.13.1.5
+          max: 1.19.60.03
+          exclusiveMax: 1.19.70.02
+    - commands: |
+        /teleport <destination: target> [checkForBlocks: Boolean]
+        /tp <destination: target> [checkForBlocks: Boolean]
+      changelog:
+        - min: 1.13.1.5
+          max: 1.19.70.02
+          exclusiveMax: 1.19.80.02
+    - commands:
+        - "/videostreamaction <action: VideoStreamAction>"
+      changelog:
+        - min: 1.13.1.5
+          max: 1.13.1.5
+          exclusiveMax: 1.16.1.02
+    - commands: |
+        /kick <name: target> <reason: message>
+        /replaceitem block <position: x y z> slot.container <slotId: int> <oldItemHandling: ReplaceMode> <itemName: Item> [amount: int] [data: int] [components: json]
+        /replaceitem entity <target: target> <slotType: EntityEquipmentSlot> <slotId: int> <oldItemHandling: ReplaceMode> <itemName: Item> [amount: int] [data: int] [components: json]
+      changelog:
+        - min: 1.16.1.02
+    - commands: |
+        /camerashake add <player: target> [intensity: float] [seconds: float] [shakeType: CameraShakeType]
+        /clearspawnpoint [player: target]
+        /event entity <target: target> <eventName: string>
+        /fog <victim: target> push <fogId: string> <userProvidedId: string>
+        /fog <victim: target> <mode: delete> <userProvidedId: string>
+        /music queue <trackName: string> [volume: float] [fadeSeconds: float] [repeatMode: MusicRepeatMode]
+        /music play <trackName: string> [volume: float] [fadeSeconds: float] [repeatMode: MusicRepeatMode]
+        /music stop [fadeSeconds: float]
+        /music volume <volume: float>
+        /playanimation <entity: target> <animation: string> [next_state: string] [blend_out_time: float] [stop_expression: string] [controller: string]
+        /ride <riders: target> start_riding <ride: target> [teleportRules: TeleportRules] [howToFill: FillType]
+        /ride <riders: target> stop_riding
+        /ride <rides: target> evict_riders
+        /ride <rides: target> summon_rider <entityType: EntityType> [spawnEvent: string] [nameTag: string]
+        /ride <riders: target> summon_ride <entityType: EntityType> [rideRules: RideRules] [spawnEvent: string] [nameTag: string]
+        /schedule on_area_loaded add <from: x y z> <to: x y z> <function: filepath>
+        /schedule on_area_loaded add circle <center: x y z> <radius: int> <function: filepath>
+        /schedule on_area_loaded add tickingarea <name: string> <function: filepath>
+        /structure save <name: string> <from: x y z> <to: x y z> [saveMode: StructureSaveMode]
+        /structure save <name: string> <from: x y z> <to: x y z> [includeEntities: Boolean] [saveMode: StructureSaveMode] [includeBlocks: Boolean]
+      changelog:
+        - min: 1.16.100.04
+    - commands: |
+        /structure load <name: string> <to: x y z> [rotation: Rotation] [mirror: Mirror] [includeEntities: Boolean] [includeBlocks: Boolean] [integrity: float] [seed: string]
+        /structure load <name: string> <to: x y z> [rotation: Rotation] [mirror: Mirror] [animationMode: StructureAnimationMode] [animationSeconds: float] [includeEntities: Boolean] [includeBlocks: Boolean] [integrity: float] [seed: string]
+      changelog:
+        - min: 1.16.100.04
+          max: 1.19.10.03
+          exclusiveMax: 1.19.30.04
+    - commands: |
+        /camerashake stop [player: target]
+        /fill <from: x y z> <to: x y z> <tileName: Block> <blockStates: block states> replace [replaceTileName: Block] [replaceBlockStates: block states]
+        /structure delete <name: string>
+      changelog:
+        - min: 1.16.210.05
+    - commands: |
+        /clone <begin: x y z> <end: x y z> <destination: x y z> filtered <cloneMode: CloneMode> <tileName: Block> <blockStates: block states>
+        /fill <from: x y z> <to: x y z> <tileName: Block> [blockStates: block states] [oldBlockHandling: FillMode]
+        /setblock <position: x y z> <tileName: Block> [blockStates: block states] [replace|destroy|keep]
+      changelog:
+        - min: 1.16.210.05
+          max: 1.19.70.02
+          exclusiveMax: 1.19.80.02
+    - commands: |
+        /dialogue change <npc: target> <sceneName: string> [players: target]
+        /dialogue open <npc: target> <player: target> [sceneName: string]
+      changelog:
+        - min: 1.17.10.04
+    - commands: |
+        /locate <feature: Feature> [useNewChunksOnly: Boolean]
+        /particle <effect: string> [position: x y z]
+      changelog:
+        - min: 1.17.30.04
+    - commands:
+        - "/locate <feature: Feature>"
+      changelog:
+        - max: 1.17.10.04
+          exclusiveMax: 1.17.30.04
+    - commands:
+        - "/testforblock <position: x y z> <tileName: Block> [blockStates: block states]"
+      changelog:
+        - min: 1.18.1.02
+    - commands: |
+        /damage <target: target> <amount: int> <cause: DamageCause> entity <damager: target>
+        /damage <target: target> <amount: int> [cause: DamageCause]
+        /loot spawn <position: x y z> kill <entity: target> [<tool>|mainhand|offhand: string]
+        /loot spawn <position: x y z> loot <loot_table: string> [<tool>|mainhand|offhand: string]
+      changelog:
+        - min: 1.18.10.04
+    - commands: |
+        /loot give <players: target> kill <entity: target> [<tool>|mainhand|offhand: string]
+        /loot give <players: target> loot <loot_table: string> [<tool>|mainhand|offhand: string]
+        /loot insert <position: x y z> kill <entity: target> [<tool>|mainhand|offhand: string]
+        /loot insert <position: x y z> loot <loot_table: string> [<tool>|mainhand|offhand: string]
+        /tickingarea add <from: x y z> <to: x y z> [name: string] [preload: Boolean]
+        /tickingarea add circle <center: x y z> <radius: int> [name: string] [preload: Boolean]
+        /tickingarea preload <name: string> [preload: Boolean]
+        /tickingarea preload <position: x y z> [preload: Boolean]
+      changelog:
+        - min: 1.18.30.04
+    - commands: |
+        /loot replace entity <entity: target> <slotType: EntityEquipmentSlot> <slotId: int> <count: int> kill <entity: target> [<tool>|mainhand|offhand: string]
+        /loot replace entity <entity: target> <slotType: EntityEquipmentSlot> <slotId: int> <count: int> loot <loot_table: string> [<tool>|mainhand|offhand: string]
+        /loot replace entity <entity: target> <slotType: EntityEquipmentSlot> <slotId: int> kill <entity: target> [<tool>|mainhand|offhand: string]
+        /loot replace entity <entity: target> <slotType: EntityEquipmentSlot> <slotId: int> loot <loot_table: string> [<tool>|mainhand|offhand: string]
+      changelog:
+        - min: 1.19.2.02
+    - commands: |
+        /locate biome <biome: Biome>
+        /locate structure <structure: Structure> [useNewChunksOnly: Boolean]
+      changelog:
+        - min: 1.19.10.03
+    - commands: |
+        /structure load <name: string> <to: x y z> [rotation: Rotation] [mirror: Mirror] [animationMode: StructureAnimationMode] [animationSeconds: float] [includeEntities: Boolean] [includeBlocks: Boolean] [waterlogged: Boolean] [integrity: float] [seed: string]
+        /structure load <name: string> <to: x y z> [rotation: Rotation] [mirror: Mirror] [includeEntities: Boolean] [includeBlocks: Boolean] [waterlogged: Boolean] [integrity: float] [seed: string]
+      changelog:
+        - min: 1.19.30.04
+    - commands:
+        - "/locate <feature: Structure> [useNewChunksOnly: Boolean]"
+      changelog:
+        - max: 1.19.10.03
+          exclusiveMax: 1.19.30.04
+    - commands: |
+        /gametest clearall
+        /gametest create <testName: string> [width: int] [height: int] [depth: int]
+        /gametest pos
+        /gametest run <testName: string> <stopOnFailure: Boolean> <repeatCount: int> [rotationSteps: int]
+        /gametest run <testName: string> [rotationSteps: int]
+        /gametest runset [tag: string] [rotationSteps: int]
+        /gametest runthese
+        /gametest runthis
+        /loot replace block <position: x y z> slot.container <slotId: int> <count: int> kill <entity: target> [<tool>|mainhand|offhand: string]
+        /loot replace block <position: x y z> slot.container <slotId: int> <count: int> loot <loot_table: string> [<tool>|mainhand|offhand: string]
+        /loot replace block <position: x y z> slot.container <slotId: int> kill <entity: target> [<tool>|mainhand|offhand: string]
+        /loot replace block <position: x y z> slot.container <slotId: int> loot <loot_table: string> [<tool>|mainhand|offhand: string]
+      changelog:
+        - min: 1.19.40.02
+    - commands: |
+        /execute <subcommand: Option_If_Unless> block <position: x y z> <block: Block> <blockStates: block states> [chainedCommand: ExecuteChainedOption_0]
+        /execute <subcommand: Option_If_Unless> block <position: x y z> <block: Block> [chainedCommand: ExecuteChainedOption_0]
+        /execute <subcommand: Option_If_Unless> blocks <begin: x y z> <end: x y z> <destination: x y z> <scan mode: BlocksScanMode> [chainedCommand: ExecuteChainedOption_0]
+        /execute <subcommand: Option_If_Unless> entity <target: target> [chainedCommand: ExecuteChainedOption_0]
+        /execute <subcommand: Option_If_Unless> score <target: target> <objective: string> <operation: compare operator> <source: target> <objective: string> [chainedCommand: ExecuteChainedOption_0]
+        /execute <subcommand: Option_If_Unless> score <target: target> <objective: string> matches <range: integer range> [chainedCommand: ExecuteChainedOption_0]
+        /execute align <axes: string> <chainedCommand: ExecuteChainedOption_0>
+        /execute anchored <eyes|feet> <chainedCommand: ExecuteChainedOption_0>
+        /execute as <origin: target> <chainedCommand: ExecuteChainedOption_0>
+        /execute at <origin: target> <chainedCommand: ExecuteChainedOption_0>
+        /execute facing <position: x y z> <chainedCommand: ExecuteChainedOption_0>
+        /execute facing entity <origin: target> <eyes|feet> <chainedCommand: ExecuteChainedOption_0>
+        /execute in <dimension: Dimension> <chainedCommand: ExecuteChainedOption_0>
+        /execute positioned <position: x y z> <chainedCommand: ExecuteChainedOption_0>
+        /execute positioned as <origin: target> <chainedCommand: ExecuteChainedOption_0>
+        /execute rotated <yaw: value> <pitch: value> <chainedCommand: ExecuteChainedOption_0>
+        /execute rotated as <origin: target> <chainedCommand: ExecuteChainedOption_0>
+        /execute run <command: command>
+      changelog:
+        - min: 1.19.50.02
+    - commands:
+        - "/execute <subcommand: Option_If_Unless> block <position: x y z> <block: Block> <data: int> [chainedCommand: ExecuteChainedOption_0]"
+      changelog:
+        - min: 1.19.50.02
+          max: 1.19.60.03
+          exclusiveMax: 1.19.70.02
+    - commands:
+        - "/execute <origin: target> <position: x y z> <command: command>"
+      changelog:
+        - max: 1.19.40.02
+          exclusiveMax: 1.19.50.02
+    - commands: |
+        /script debugger close
+        /script debugger connect [host: string] [port: int]
+        /script debugger listen <port: int>
+        /script profiler start
+        /script profiler stop
+      changelog:
+        - min: 1.19.60.03
+    - commands:
+        - /script watchdog exportstats
+      changelog:
+        - min: 1.19.60.03
+          max: 1.21.50.07
+          exclusiveMax: 1.21.60.10
+    - commands:
+        - "/summon <entityType: EntityType> [spawnPos: x y z] [yRot: value] [xRot: value] [spawnEvent: string] [nameTag: string]"
+      changelog:
+        - min: 1.19.70.02
+    - commands:
+        - "/testforblock <position: x y z> <tileName: Block> [dataValue: int]"
+      changelog:
+        - max: 1.19.60.03
+          exclusiveMax: 1.19.70.02
+    - commands: |
+        /clone <begin: x y z> <end: x y z> <destination: x y z> filtered <cloneMode: CloneMode> <tileName: Block> [blockStates: block states]
+        /fill <from: x y z> <to: x y z> <tileName: Block> <blockStates: block states> [oldBlockHandling: FillMode]
+        /fill <from: x y z> <to: x y z> <tileName: Block> [oldBlockHandling: FillMode]
+        /fill <from: x y z> <to: x y z> <tileName: Block> replace [replaceTileName: Block] [replaceBlockStates: block states]
+        /gametest runsetuntilfail [tag: string] [rotationSteps: int]
+        /gametest stopall
+        /inputpermission query <targets: target> <permission: permission> [state: state]
+        /inputpermission set <targets: target> <permission: permission> <state: state>
+        /setblock <position: x y z> <tileName: Block> <blockStates: block states> [replace|destroy|keep]
+        /setblock <position: x y z> <tileName: Block> [replace|destroy|keep]
+        /summon <entityType: EntityType> [spawnPos: x y z] facing <lookAtEntity: target> [spawnEvent: string] [nameTag: string]
+        /summon <entityType: EntityType> [spawnPos: x y z] facing <lookAtPosition: x y z> [spawnEvent: string] [nameTag: string]
+      changelog:
+        - min: 1.19.80.02
+    - commands: |
+        /camera <players: target> clear
+        /camera <players: target> fade
+        /camera <players: target> fade color <red: int> <green: int> <blue: int>
+        /camera <players: target> fade time <fadeInSeconds: float> <holdSeconds: float> <fadeOutSeconds: float>
+        /camera <players: target> fade time <fadeInSeconds: float> <holdSeconds: float> <fadeOutSeconds: float> color <red: int> <green: int> <blue: int>
+        /camera <players: target> set <preset: string> [default: default]
+        /camera <players: target> set <preset: string> ease <easeTime: float> <easeType: Easing> [default: default]
+        /camera <players: target> set <preset: string> ease <easeTime: float> <easeType: Easing> facing <lookAtEntity: target>
+        /camera <players: target> set <preset: string> ease <easeTime: float> <easeType: Easing> facing <lookAtPosition: x y z>
+        /camera <players: target> set <preset: string> ease <easeTime: float> <easeType: Easing> pos <position: x y z>
+        /camera <players: target> set <preset: string> ease <easeTime: float> <easeType: Easing> pos <position: x y z> facing <lookAtEntity: target>
+        /camera <players: target> set <preset: string> ease <easeTime: float> <easeType: Easing> pos <position: x y z> facing <lookAtPosition: x y z>
+        /camera <players: target> set <preset: string> ease <easeTime: float> <easeType: Easing> pos <position: x y z> rot <xRot: value> <yRot: value>
+        /camera <players: target> set <preset: string> ease <easeTime: float> <easeType: Easing> rot <xRot: value> <yRot: value>
+        /camera <players: target> set <preset: string> facing <lookAtEntity: target>
+        /camera <players: target> set <preset: string> facing <lookAtPosition: x y z>
+        /camera <players: target> set <preset: string> pos <position: x y z>
+        /camera <players: target> set <preset: string> pos <position: x y z> facing <lookAtEntity: target>
+        /camera <players: target> set <preset: string> pos <position: x y z> facing <lookAtPosition: x y z>
+        /camera <players: target> set <preset: string> pos <position: x y z> rot <xRot: value> <yRot: value>
+        /camera <players: target> set <preset: string> rot <xRot: value> <yRot: value>
+        /recipe give <player: target> <recipe: string>
+        /recipe take <player: target> <recipe: string>
+        /scriptevent <messageId: string> <message: message>
+      changelog:
+        - min: 1.20.30.02
+    - commands:
+        - "/hud <target: target> <visible: HudVisibility> [hud_element: HudElement]"
+      changelog:
+        - min: 1.20.80.05
+    - commands:
+        - "/spreadplayers <x: value> <z: value> <spreadDistance: float> <maxRange: float> <victim: target> [maxHeight: value]"
+      changelog:
+        - min: 1.21.20.03
+    - commands:
+        - "/spreadplayers <x: value> <z: value> <spreadDistance: float> <maxRange: float> <victim: target>"
+      changelog:
+        - max: 1.20.80.05
+          exclusiveMax: 1.21.20.03
+    - commands:
+        - "/reload [all: reload_all]"
+      changelog:
+        - min: 1.21.30.03
+    - commands: |
+        /camera <players: target> set <preset: string> entity_offset <xEntityOffset: float> <yEntityOffset: float> <zEntityOffset: float>
+        /camera <players: target> set <preset: string> rot <xRot: value> <yRot: value> entity_offset <xEntityOffset: float> <yEntityOffset: float> <zEntityOffset: float>
+        /camera <players: target> set <preset: string> rot <xRot: value> <yRot: value> view_offset <xViewOffset: float> <yViewOffset: float>
+        /camera <players: target> set <preset: string> rot <xRot: value> <yRot: value> view_offset <xViewOffset: float> <yViewOffset: float> entity_offset <xEntityOffset: float> <yEntityOffset: float> <zEntityOffset: float>
+        /camera <players: target> set <preset: string> view_offset <xViewOffset: float> <yViewOffset: float>
+        /camera <players: target> set <preset: string> view_offset <xViewOffset: float> <yViewOffset: float> entity_offset <xEntityOffset: float> <yEntityOffset: float> <zEntityOffset: float>
+        /effect <player: target> <effect: Effect> infinite [amplifier: int] [hideParticles: Boolean]
+        /effect <player: target> clear [effect: Effect]
+        /schedule clear <function: filepath>
+        /schedule on_area_loaded clear function <function: filepath>
+        /schedule on_area_loaded clear tickingarea <name: string> [function: filepath]
+      changelog:
+        - min: 1.21.40.04
+    - commands: |
+        /schedule delay add <function: filepath> <time: int> [replace|append]
+        /schedule delay add <function: filepath> <time: int>D [replace|append]
+        /schedule delay add <function: filepath> <time: int>S [replace|append]
+        /schedule delay add <function: filepath> <time: int>T [replace|append]
+        /schedule delay clear <function: filepath>
+      changelog:
+        - min: 1.21.50.07
+    - commands: |
+        /camera <players: target> remove_target
+        /camera <players: target> target_entity <entity: target>
+        /camera <players: target> target_entity <entity: target> target_center_offset <xTargetCenterOffset: float> <yTargetCenterOffset: float> <zTargetCenterOffset: float>
+        /loot give <players: target> mine <TargetBlockPosition: x y z> [<tool>|mainhand|offhand: string]
+        /loot insert <position: x y z> mine <TargetBlockPosition: x y z> [<tool>|mainhand|offhand: string]
+        /loot replace block <position: x y z> slot.container <slotId: int> <count: int> mine <TargetBlockPosition: x y z> [<tool>|mainhand|offhand: string]
+        /loot replace block <position: x y z> slot.container <slotId: int> mine <TargetBlockPosition: x y z> [<tool>|mainhand|offhand: string]
+        /loot replace entity <entity: target> <slotType: EntityEquipmentSlot> <slotId: int> <count: int> mine <TargetBlockPosition: x y z> [<tool>|mainhand|offhand: string]
+        /loot replace entity <entity: target> <slotType: EntityEquipmentSlot> <slotId: int> mine <TargetBlockPosition: x y z> [<tool>|mainhand|offhand: string]
+        /loot spawn <position: x y z> mine <TargetBlockPosition: x y z> [<tool>|mainhand|offhand: string]
+        /script diagnostics startcapture
+        /script diagnostics stopcapture
+      changelog:
+        - min: 1.21.60.10
+    - commands: |
+        /aimassist <players: target> clear
+        /aimassist <players: target> set [x angle: float] [y angle: float] [max distance: float] [target mode: AimAssistTargetMode] [preset id: string]
+        /place feature <feature: features> [position: x y z]
+        /place featurerule <featurerule: featureRules> [position: x y z]
+      changelog:
+        - min: 1.21.70.03
+    - commands: |
+        /camera <players: target> set <preset: string> ease <easeTime: float> <easeType: Easing> entity_offset <xEntityOffset: float> <yEntityOffset: float> <zEntityOffset: float>
+        /camera <players: target> set <preset: string> ease <easeTime: float> <easeType: Easing> rot <xRot: value> <yRot: value> entity_offset <xEntityOffset: float> <yEntityOffset: float> <zEntityOffset: float>
+        /camera <players: target> set <preset: string> ease <easeTime: float> <easeType: Easing> rot <xRot: value> <yRot: value> view_offset <xViewOffset: float> <yViewOffset: float>
+        /camera <players: target> set <preset: string> ease <easeTime: float> <easeType: Easing> rot <xRot: value> <yRot: value> view_offset <xViewOffset: float> <yViewOffset: float> entity_offset <xEntityOffset: float> <yEntityOffset: float> <zEntityOffset: float>
+        /camera <players: target> set <preset: string> ease <easeTime: float> <easeType: Easing> view_offset <xViewOffset: float> <yViewOffset: float>
+        /camera <players: target> set <preset: string> ease <easeTime: float> <easeType: Easing> view_offset <xViewOffset: float> <yViewOffset: float> entity_offset <xEntityOffset: float> <yEntityOffset: float> <zEntityOffset: float>
+      changelog:
+        - min: 1.21.80.3
+    - commands: |
+        /place jigsaw <pool: filepath> <jigsawTarget: string> <maxDepth: int> [pos: x y z] [keepJigsaws: Boolean] [includeEntities: Boolean]
+        /place structure <structure: string> [pos: x y z] [ignoreStartHeight: Boolean] [keepJigsaws: Boolean] [includeEntities: Boolean]
+      changelog:
+        - min: 1.21.80.3
+          max: 1.21.80.3
+          exclusiveMax: 1.21.90.3
+    - commands: |
+        /controlscheme <players: target> clear
+        /controlscheme <players: target> set <control scheme: controlscheme>
+        /place jigsaw <pool: filepath> <jigsawTarget: string> <maxDepth: int> [pos: x y z] [keepJigsaws: Boolean] [includeEntities: Boolean] [liquidSettings: LiquidSettings]
+        /place structure <structure: string> [pos: x y z] [ignoreStartHeight: Boolean] [keepJigsaws: Boolean] [includeEntities: Boolean] [liquidSettings: LiquidSettings]
+      changelog:
+        - min: 1.21.90.3
+  education:
+    - commands: |
+        /ability <player: target> <mayfly|mute|worldbuilder> <true|false>
+        /ability <player: target> [mayfly|mute|worldbuilder]
+        /immutableworld [true|false]
+      changelog:
+        - min: 1.5.1.2
+          max: 1.5.1.2
+          exclusiveMax: 1.13.1.5
+    - commands: |
+        /wb
+        /worldbuilder
+      changelog:
+        - min: 1.5.1.2
+    - commands: |
+        /ability <player: target> <ability: Ability> <value: Boolean>
+        /ability <player: target> [ability: Ability]
+        /immutableworld [value: Boolean]
+      changelog:
+        - min: 1.13.1.5
+    - commands: |
+        -/recipe give <player: target> <recipe: string>
+        -/recipe take <player: target> <recipe: string>
+      changelog:
+        - min: 1.20.30.02
+          max: 1.20.30.02
+          exclusiveMax: 1.20.50.03
+  experiment:
+    - commands: |
+        /gametest runthis
+        /gametest pos
+        /gametest create <testName: string> [width: int] [height: int] [depth: int]
+        /gametest runthese
+      changelog:
+        - min: 1.16.210.05
+          max: 1.19.30.04
+          exclusiveMax: 1.19.40.02
+    - commands:
+        - "/gametest run <testName: GameTestName> [rotationSteps: int]"
+      changelog:
+        - min: 1.16.210.05
+    - commands:
+        - "/gametest runall [tagTag: GameTestTag] [rotationSteps: int]"
+      changelog:
+        - min: 1.16.210.05
+          max: 1.16.220.02
+          exclusiveMax: 1.17.2.01
+    - commands:
+        - "/gametest clearall [radius: int]"
+      changelog:
+        - min: 1.16.210.05
+          max: 1.17.30.04
+          exclusiveMax: 1.18.30.04
+    - commands:
+        - "/gametest run <testName: GameTestName> <stopOnFailure: Boolean> <repeatCount: int> [rotationSteps: int]"
+      changelog:
+        - min: 1.16.220.02
+    - commands:
+        - "/gametest runset [tag: GameTestTag] [rotationSteps: int]"
+      changelog:
+        - min: 1.17.2.01
+    - commands: |
+        /script debugger close
+        /script debugger listen <port: int>
+      changelog:
+        - min: 1.17.30.04
+          max: 1.19.30.04
+          exclusiveMax: 1.19.40.02
+    - commands:
+        - "/script debugger connect <host: string> <port: int>"
+      changelog:
+        - min: 1.17.30.04
+          max: 1.18.30.04
+          exclusiveMax: 1.19.2.02
+    - commands:
+        - /gametest clearall
+      changelog:
+        - min: 1.18.30.04
+          max: 1.19.30.04
+          exclusiveMax: 1.19.40.02
+    - commands: |
+        /volumearea add <identifier: string> <from: x y z> <to: x y z> [name: string]
+        /volumearea list [all-dimensions: VolumeAreaAllDimensions]
+        /volumearea remove <name: string>
+        /volumearea remove <position: x y z>
+        /volumearea remove_all
+      changelog:
+        - min: 1.18.30.04
+          max: 1.20.80.05
+          exclusiveMax: 1.21.20.03
+    - commands: |
+        /script debugger connect [host: string] [port: int]
+        /script profiler start
+        /script profiler stop
+      changelog:
+        - min: 1.19.2.02
+          max: 1.19.30.04
+          exclusiveMax: 1.19.40.02
+    - commands: |
+        /execute <subcommand: Option_If_Unless> block <position: x y z> <block: Block> <blockStates: block states> [chainedCommand: ExecuteChainedOption_0]
+        /execute <subcommand: Option_If_Unless> block <position: x y z> <block: Block> <data: int> [chainedCommand: ExecuteChainedOption_0]
+        /execute <subcommand: Option_If_Unless> block <position: x y z> <block: Block> [chainedCommand: ExecuteChainedOption_0]
+        /execute <subcommand: Option_If_Unless> blocks <begin: x y z> <end: x y z> <destination: x y z> <scan mode: BlocksScanMode> [chainedCommand: ExecuteChainedOption_0]
+        /execute <subcommand: Option_If_Unless> entity <target: target> [chainedCommand: ExecuteChainedOption_0]
+        /execute <subcommand: Option_If_Unless> score <target: target> <objective: string> <operation: compare operator> <source: target> <objective: string> [chainedCommand: ExecuteChainedOption_0]
+        /execute <subcommand: Option_If_Unless> score <target: target> <objective: string> matches <range: integer range> [chainedCommand: ExecuteChainedOption_0]
+        /execute as <origin: target> <chainedCommand: ExecuteChainedOption_0>
+        /execute at <origin: target> <chainedCommand: ExecuteChainedOption_0>
+        /execute positioned <position: x y z> <chainedCommand: ExecuteChainedOption_0>
+        /execute positioned as <origin: target> <chainedCommand: ExecuteChainedOption_0>
+        /execute run <command: command>
+        -/execute <origin: target> <position: x y z> <command: command>
+        -/execute <origin: target> <position: x y z> detect <detectPos: x y z> <block: Block> <data: int> <command: command>
+      changelog:
+        - min: 1.19.10.03
+          max: 1.19.40.02
+          exclusiveMax: 1.19.50.02
+    - commands:
+        - /script watchdog exportstats
+      changelog:
+        - min: 1.19.30.04
+          max: 1.19.30.04
+          exclusiveMax: 1.19.40.02
+    - commands: |
+        /execute align <axes: string> <chainedCommand: ExecuteChainedOption_0>
+        /execute anchored <eyes|feet> <chainedCommand: ExecuteChainedOption_0>
+        /execute facing <position: x y z> <chainedCommand: ExecuteChainedOption_0>
+        /execute facing entity <origin: target> <eyes|feet> <chainedCommand: ExecuteChainedOption_0>
+        /execute in <dimension: Dimension> <chainedCommand: ExecuteChainedOption_0>
+        /execute rotated <yaw: value> <pitch: value> <chainedCommand: ExecuteChainedOption_0>
+        /execute rotated as <origin: target> <chainedCommand: ExecuteChainedOption_0>
+      changelog:
+        - min: 1.19.40.02
+          max: 1.19.40.02
+          exclusiveMax: 1.19.50.02
+    - commands: |
+        /gametest run <testName: string> <stopOnFailure: Boolean> <repeatCount: int> [rotationSteps: int]
+        /gametest run <testName: string> [rotationSteps: int]
+        /gametest runset [tag: string] [rotationSteps: int]
+      changelog:
+        - max: 1.19.30.04
+          exclusiveMax: 1.19.40.02
+    - commands:
+        - "/scriptevent <messageId: string> <message: message>"
+      changelog:
+        - min: 1.19.60.03
+          max: 1.20.10.01
+          exclusiveMax: 1.20.30.02
+    - commands: |
+        /camera <players: target> clear
+        /camera <players: target> fade
+        /camera <players: target> fade time <fadeInSeconds: float> <holdSeconds: float> <fadeOutSeconds: float>
+        /camera <players: target> set <preset: string> [default: default]
+        /camera <players: target> set <preset: string> ease <easeTime: float> <easeType: Easing> [default: default]
+        /camera <players: target> set <preset: string> ease <easeTime: float> <easeType: Easing> pos <position: x y z>
+        /camera <players: target> set <preset: string> ease <easeTime: float> <easeType: Easing> pos <position: x y z> rot <xRot: value> <yRot: value>
+        /camera <players: target> set <preset: string> ease <easeTime: float> <easeType: Easing> rot <xRot: value> <yRot: value>
+        /camera <players: target> set <preset: string> pos <position: x y z>
+        /camera <players: target> set <preset: string> pos <position: x y z> rot <xRot: value> <yRot: value>
+        /camera <players: target> set <preset: string> rot <xRot: value> <yRot: value>
+        /scoreboard players <set|add|remove> <player: target> <objective: string> <count: int>
+        -/scoreboard players <add|remove|set> <player: target> <objective: string> <count: int>
+      changelog:
+        - min: 1.20.1.02
+          max: 1.20.10.01
+          exclusiveMax: 1.20.30.02
+    - commands: |
+        /camera <players: target> fade color <red: float> <green: float> <blue: float>
+        /camera <players: target> fade time <fadeInSeconds: float> <holdSeconds: float> <fadeOutSeconds: float> color <red: float> <green: float> <blue: float>
+      changelog:
+        - min: 1.20.1.02
+    - commands: |
+        /camera <players: target> set <preset: string> ease <easeTime: float> <easeType: Easing> facing <lookAtEntity: target>
+        /camera <players: target> set <preset: string> ease <easeTime: float> <easeType: Easing> facing <lookAtPosition: x y z>
+        /camera <players: target> set <preset: string> ease <easeTime: float> <easeType: Easing> pos <position: x y z> facing <lookAtEntity: target>
+        /camera <players: target> set <preset: string> ease <easeTime: float> <easeType: Easing> pos <position: x y z> facing <lookAtPosition: x y z>
+        /camera <players: target> set <preset: string> facing <lookAtEntity: target>
+        /camera <players: target> set <preset: string> facing <lookAtPosition: x y z>
+        /camera <players: target> set <preset: string> pos <position: x y z> facing <lookAtEntity: target>
+        /camera <players: target> set <preset: string> pos <position: x y z> facing <lookAtPosition: x y z>
+        /recipe <victim: target> give <recipe: string>
+        /recipe <victim: target> take <recipe: string>
+      changelog:
+        - min: 1.20.10.01
+          max: 1.20.10.01
+          exclusiveMax: 1.20.30.02
+    - commands: |
+        /camera <players: target> fade color <red: int> <green: int> <blue: int>
+        /camera <players: target> fade time <fadeInSeconds: float> <holdSeconds: float> <fadeOutSeconds: float> color <red: int> <green: int> <blue: int>
+      changelog:
+        - max: 1.20.10.01
+          exclusiveMax: 1.20.30.02
+    - commands:
+        - "/hud <target: target> <visible: HudVisibility> [hud_element: HudElement]"
+      changelog:
+        - min: 1.20.60.04
+          max: 1.20.60.04
+          exclusiveMax: 1.20.80.05
+    - commands: |
+        /camera <players: target> remove_target
+        /camera <players: target> target_entity <entity: target>
+        /camera <players: target> target_entity <entity: target> target_center_offset <xTargetCenterOffset: float> <yTargetCenterOffset: float> <zTargetCenterOffset: float>
+      changelog:
+        - min: 1.21.20.03
+          max: 1.21.50.07
+          exclusiveMax: 1.21.60.10
+    - commands: |
+        /camera <players: target> set <preset: string> rot <xRot: value> <yRot: value> view_offset <xViewOffset: float> <yViewOffset: float>
+        /camera <players: target> set <preset: string> view_offset <xViewOffset: float> <yViewOffset: float>
+      changelog:
+        - min: 1.21.20.03
+          max: 1.21.20.03
+          exclusiveMax: 1.21.40.04
+    - commands: |
+        /aimassist <players: target> clear
+        /aimassist <players: target> set [x angle: float] [y angle: float] [max distance: float] [target mode: AimAssistTargetMode] [preset id: string]
+      changelog:
+        - min: 1.21.50.07
+          max: 1.21.60.10
+          exclusiveMax: 1.21.70.03
+    - commands: |
+        /loot give <players: target> mine <TargetBlockPosition: x y z> [<tool>|mainhand|offhand: string]
+        /loot insert <position: x y z> mine <TargetBlockPosition: x y z> [<tool>|mainhand|offhand: string]
+        /loot replace block <position: x y z> slot.container <slotId: int> <count: int> mine <TargetBlockPosition: x y z> [<tool>|mainhand|offhand: string]
+        /loot replace block <position: x y z> slot.container <slotId: int> mine <TargetBlockPosition: x y z> [<tool>|mainhand|offhand: string]
+        /loot replace entity <entity: target> <slotType: EntityEquipmentSlot> <slotId: int> <count: int> mine <TargetBlockPosition: x y z> [<tool>|mainhand|offhand: string]
+        /loot replace entity <entity: target> <slotType: EntityEquipmentSlot> <slotId: int> mine <TargetBlockPosition: x y z> [<tool>|mainhand|offhand: string]
+        /loot spawn <position: x y z> mine <TargetBlockPosition: x y z> [<tool>|mainhand|offhand: string]
+        /place jigsaw <pool: filepath> <jigsawTarget: string> <maxDepth: int> [pos: x y z] [keepJigsaws: Boolean]
+        /place structure <structure: string> [pos: x y z] [ignoreStartHeight: Boolean] [keepJigsaws: Boolean]
+      changelog:
+        - min: 1.21.50.07
+          max: 1.21.50.07
+          exclusiveMax: 1.21.60.10
+    - commands: |
+        /place feature <feature: features> [position: x y z]
+        /place featurerule <featurerule: featureRules> [position: x y z]
+      changelog:
+        - min: 1.21.60.10
+          max: 1.21.60.10
+          exclusiveMax: 1.21.70.03
+    - commands: |
+        /place jigsaw <pool: filepath> <jigsawTarget: string> <maxDepth: int> [pos: x y z] [keepJigsaws: Boolean] [includeEntities: Boolean]
+        /place structure <structure: string> [pos: x y z] [ignoreStartHeight: Boolean] [keepJigsaws: Boolean] [includeEntities: Boolean]
+      changelog:
+        - min: 1.21.60.10
+          max: 1.21.70.03
+          exclusiveMax: 1.21.80.3
+    - commands: |
+        /controlscheme <players: target> clear
+        /controlscheme <players: target> set <control scheme: controlscheme>
+      changelog:
+        - min: 1.21.80.3
+          max: 1.21.80.3
+          exclusiveMax: 1.21.90.3
+    - commands: |
+        /camera <players: target> fov_clear [fovEaseTime: float] [fovEaseType: Easing]
+        /camera <players: target> fov_set <fov_value: float> [fovEaseTime: float] [fovEaseType: Easing]
+      changelog:
+        - min: 1.21.100.6
+probablyRenamed:
+  vanilla:
+    1.2.1.1:
+      - |
+        /help [page: int]
+        /help [command: CommandName]
+      - |
+        /help <command: string>
+        /help <page: int>
