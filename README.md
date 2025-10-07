@@ -15,10 +15,19 @@
 本列表以 [CC BY-SA 4.0](https://creativecommons.org/licenses/by-sa/4.0/) 协议发布。
 
 目前本日志包含的最新版本:
-- 正式版（Release） : `1.21.101.1`
-- 预览版（Preview）: `1.21.110.26`
+- 正式版（Release） : `1.21.111.1`
+- 预览版（Preview）: `1.21.120.24`
 
 ## 1.21
+
+### 1.21.120.24
+
+`camera` 命令支持 `attach_to_entity` 与 `detach_from_entity` 子命令。（需要启用特定实验性玩法）
+
+```
+/camera <players: target> attach_to_entity <entity: target>
+/camera <players: target> detach_from_entity
+```
 
 ### 1.21.100.25
 
@@ -1520,7 +1529,7 @@
 
 ## 最新版本命令列表
 
-版本：1.21.110.26
+版本：1.21.120.24
 
 ```
 /? <page: int>
@@ -1798,6 +1807,12 @@
 /immutableworld [value: Boolean]
 /wb
 /worldbuilder
+```
+
+启用创建者照相机的实验性功能（Experimental Creator Camera Features）后还会添加以下命令语法：
+```
+/camera <players: target> attach_to_entity <entity: target>
+/camera <players: target> detach_from_entity
 ```
 
 ## 中国版所对应的国际版一览

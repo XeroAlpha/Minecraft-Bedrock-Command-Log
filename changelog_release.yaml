@@ -959,6 +959,15 @@ versions:
       added: |
         /camera <players: target> fov_clear [fovEaseTime: float] [fovEaseType: Easing]
         /camera <players: target> fov_set <fov_value: float> [fovEaseTime: float] [fovEaseType: Easing]
+  1.21.111.1:
+    vanilla:
+      added: |
+        /camera <players: target> fov_clear [fovEaseTime: float] [fovEaseType: Easing]
+        /camera <players: target> fov_set <fov_value: float> [fovEaseTime: float] [fovEaseType: Easing]
+    experiment:
+      removed: |
+        /camera <players: target> fov_clear [fovEaseTime: float] [fovEaseType: Easing]
+        /camera <players: target> fov_set <fov_value: float> [fovEaseTime: float] [fovEaseType: Easing]
 commands:
   vanilla:
     - commands: |
@@ -1634,6 +1643,11 @@ commands:
         /place structure <structure: string> [pos: x y z] [ignoreStartHeight: Boolean] [keepJigsaws: Boolean] [includeEntities: Boolean] [liquidSettings: LiquidSettings]
       changelog:
         - min: 1.21.90.3
+    - commands: |
+        /camera <players: target> fov_clear [fovEaseTime: float] [fovEaseType: Easing]
+        /camera <players: target> fov_set <fov_value: float> [fovEaseTime: float] [fovEaseType: Easing]
+      changelog:
+        - min: 1.21.111.1
   education:
     - commands: |
         /ability <player: target> <mayfly|mute|worldbuilder> <true|false>
@@ -1894,6 +1908,8 @@ commands:
         /camera <players: target> fov_set <fov_value: float> [fovEaseTime: float] [fovEaseType: Easing]
       changelog:
         - min: 1.21.100.6
+          max: 1.21.100.6
+          exclusiveMax: 1.21.111.1
 probablyRenamed:
   vanilla:
     1.2.1.1:
