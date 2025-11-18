@@ -968,6 +968,11 @@ versions:
       removed: |
         /camera <players: target> fov_clear [fovEaseTime: float] [fovEaseType: Easing]
         /camera <players: target> fov_set <fov_value: float> [fovEaseTime: float] [fovEaseType: Easing]
+  1.21.120.4:
+    experiment:
+      added: |
+        /camera <players: target> attach_to_entity <entity: target>
+        /camera <players: target> detach_from_entity
 commands:
   vanilla:
     - commands: |
@@ -1910,6 +1915,11 @@ commands:
         - min: 1.21.100.6
           max: 1.21.100.6
           exclusiveMax: 1.21.111.1
+    - commands: |
+        /camera <players: target> attach_to_entity <entity: target>
+        /camera <players: target> detach_from_entity
+      changelog:
+        - min: 1.21.120.4
 probablyRenamed:
   vanilla:
     1.2.1.1:
