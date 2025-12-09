@@ -16,7 +16,16 @@
 
 目前本日志包含的最新版本:
 - 正式版（Release） : `1.21.111.1`
-- 预览版（Preview）: `1.21.120.24`
+- 预览版（Preview）: `26.0.23`
+
+## 26.0
+
+### 26.0.23
+
+添加 `packstack` 命令。
+```
+/packstack <stackType: stackType> [verbose: verbose] [exclude-vanilla: exclude-vanilla]
+```
 
 ## 1.21
 
@@ -1529,7 +1538,7 @@
 
 ## 最新版本命令列表
 
-版本：1.21.120.24
+版本：26.0.23
 
 ```
 /? <page: int>
@@ -1678,6 +1687,7 @@
 /music stop [fadeSeconds: float]
 /music volume <volume: float>
 /op <player: target>
+/packstack <stackType: stackType> [verbose: verbose] [exclude-vanilla: exclude-vanilla]
 /particle <effect: string> [position: x y z]
 /place feature <feature: features> [position: x y z]
 /place featurerule <featurerule: featureRules> [position: x y z]
