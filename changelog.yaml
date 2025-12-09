@@ -1741,6 +1741,10 @@ versions:
       added: |
         /camera <players: target> attach_to_entity <entity: target>
         /camera <players: target> detach_from_entity
+  26.0.23:
+    vanilla:
+      added:
+        - "/packstack <stackType: stackType> [verbose: verbose] [exclude-vanilla: exclude-vanilla]"
 commands:
   vanilla:
     - commands: |
@@ -2727,6 +2731,10 @@ commands:
         /camera <players: target> fov_set <fov_value: float> [fovEaseTime: float] [fovEaseType: Easing]
       changelog:
         - min: 1.21.110.25
+    - commands:
+        - "/packstack <stackType: stackType> [verbose: verbose] [exclude-vanilla: exclude-vanilla]"
+      changelog:
+        - min: 26.0.23
   education:
     - commands: |
         /ability <player: target> <mayfly|mute|worldbuilder> <true|false>

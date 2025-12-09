@@ -8,6 +8,14 @@ import { stringify as stringifyYaml } from 'yaml';
 const GIT_PATH = join('.', 'caidlist');
 const BASE_PATH = join(GIT_PATH, 'version');
 
+function convertVersionName(version: string) {
+    const parts = version.split('.');
+    if (parts[0] === '1' && Number(parts[1]) >= 26) {
+        return parts.slice(1).join('.');
+    }
+    return version;
+}
+
 function updateCommands() {
     [
         ['beta', 'vanilla'],
@@ -19,7 +27,7 @@ function updateCommands() {
     ].forEach(([versionType, branchId]) => {
         const sourcePath = join(BASE_PATH, versionType, 'autocompletion', branchId, 'mcpews.json');
         const source = eval(`(${readFileSync(sourcePath, 'utf-8')})`);
-        const targetPath = join('.', 'versions', branchId, source.packageVersion + '.txt');
+        const targetPath = join('.', 'versions', branchId, convertVersionName(source.packageVersion) + '.txt');
         const isNew = !existsSync(targetPath);
         if (isNew) {
             writeFileSync(targetPath, source.result.commandList.join('\n'));
