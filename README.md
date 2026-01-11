@@ -15,10 +15,18 @@
 本列表以 [CC BY-SA 4.0](https://creativecommons.org/licenses/by-sa/4.0/) 协议发布。
 
 目前本日志包含的最新版本:
-- 正式版（Release） : `1.21.111.1`
-- 预览版（Preview）: `26.0.23`
+- 正式版（Release） : `1.21.131.1`
+- 预览版（Preview）: `26.0.27`
 
 ## 26.0
+
+### 26.0.27
+
+`camera` 命令支持 `attach_to_entity` 与 `detach_from_entity` 子命令。（需要启用特定实验性玩法）
+
+```
+/camera <players: target> play_spline <name: string>
+```
 
 ### 26.0.23
 
@@ -1538,7 +1546,7 @@
 
 ## 最新版本命令列表
 
-版本：26.0.23
+版本：26.0.27
 
 ```
 /? <page: int>
@@ -1823,6 +1831,7 @@
 ```
 /camera <players: target> attach_to_entity <entity: target>
 /camera <players: target> detach_from_entity
+/camera <players: target> attach_to_entity <entity
 ```
 
 ## 中国版所对应的国际版一览

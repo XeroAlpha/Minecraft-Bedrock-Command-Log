@@ -1353,6 +1353,10 @@ versions:
     vanilla:
       added:
         - "/packstack <stackType: stackType> [verbose: verbose] [exclude-vanilla: exclude-vanilla]"
+  26.0.27:
+    experiment:
+      added:
+        - "/camera <players: target> play_spline <name: string>"
 commands:
   vanilla:
     - commands: |
@@ -2606,6 +2610,10 @@ commands:
         /camera <players: target> detach_from_entity
       changelog:
         - min: 1.21.120.24
+    - commands:
+        - "/camera <players: target> play_spline <name: string>"
+      changelog:
+        - min: 26.0.27
 probablyRenamed:
   vanilla:
     1.2.0.2:

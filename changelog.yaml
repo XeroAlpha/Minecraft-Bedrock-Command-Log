@@ -1745,6 +1745,10 @@ versions:
     vanilla:
       added:
         - "/packstack <stackType: stackType> [verbose: verbose] [exclude-vanilla: exclude-vanilla]"
+  26.0.27:
+    experiment:
+      added:
+        - "/camera <players: target> play_spline <name: string>"
 commands:
   vanilla:
     - commands: |
@@ -3134,6 +3138,10 @@ commands:
       changelog:
         - include: 1.21.120.4
         - min: 1.21.120.24
+    - commands:
+        - "/camera <players: target> play_spline <name: string>"
+      changelog:
+        - min: 26.0.27
 probablyRenamed:
   vanilla:
     1.2.0.2:
