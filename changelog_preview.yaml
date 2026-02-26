@@ -1357,6 +1357,17 @@ versions:
     experiment:
       added:
         - "/camera <players: target> play_spline <name: string>"
+  26.10.25:
+    vanilla:
+      added: |
+        /camera <players: target> attach_to_entity <entity: target>
+        /camera <players: target> detach_from_entity
+        /camera <players: target> play_spline <name: string>
+    experiment:
+      removed: |
+        /camera <players: target> attach_to_entity <entity: target>
+        /camera <players: target> detach_from_entity
+        /camera <players: target> play_spline <name: string>
 commands:
   vanilla:
     - commands: |
@@ -2276,6 +2287,12 @@ commands:
         - "/packstack <stackType: stackType> [verbose: verbose] [exclude-vanilla: exclude-vanilla]"
       changelog:
         - min: 26.0.23
+    - commands: |
+        /camera <players: target> attach_to_entity <entity: target>
+        /camera <players: target> detach_from_entity
+        /camera <players: target> play_spline <name: string>
+      changelog:
+        - min: 26.10.25
   education:
     - commands: |
         /ability <player: target> <mayfly|mute|worldbuilder> <true|false>
@@ -2610,10 +2627,14 @@ commands:
         /camera <players: target> detach_from_entity
       changelog:
         - min: 1.21.120.24
+          max: 26.0.27
+          exclusiveMax: 26.10.25
     - commands:
         - "/camera <players: target> play_spline <name: string>"
       changelog:
         - min: 26.0.27
+          max: 26.0.27
+          exclusiveMax: 26.10.25
 probablyRenamed:
   vanilla:
     1.2.0.2:

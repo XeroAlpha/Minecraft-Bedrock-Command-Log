@@ -973,6 +973,13 @@ versions:
       added: |
         /camera <players: target> attach_to_entity <entity: target>
         /camera <players: target> detach_from_entity
+  26.0.2:
+    vanilla:
+      added:
+        - "/packstack <stackType: stackType> [verbose: verbose] [exclude-vanilla: exclude-vanilla]"
+    experiment:
+      added:
+        - "/camera <players: target> play_spline <name: string>"
 commands:
   vanilla:
     - commands: |
@@ -1653,6 +1660,10 @@ commands:
         /camera <players: target> fov_set <fov_value: float> [fovEaseTime: float] [fovEaseType: Easing]
       changelog:
         - min: 1.21.111.1
+    - commands:
+        - "/packstack <stackType: stackType> [verbose: verbose] [exclude-vanilla: exclude-vanilla]"
+      changelog:
+        - min: 26.0.2
   education:
     - commands: |
         /ability <player: target> <mayfly|mute|worldbuilder> <true|false>
@@ -1920,6 +1931,10 @@ commands:
         /camera <players: target> detach_from_entity
       changelog:
         - min: 1.21.120.4
+    - commands:
+        - "/camera <players: target> play_spline <name: string>"
+      changelog:
+        - min: 26.0.2
 probablyRenamed:
   vanilla:
     1.2.1.1:

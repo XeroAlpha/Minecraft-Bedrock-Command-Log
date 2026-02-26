@@ -15,14 +15,26 @@
 本列表以 [CC BY-SA 4.0](https://creativecommons.org/licenses/by-sa/4.0/) 协议发布。
 
 目前本日志包含的最新版本:
-- 正式版（Release） : `1.21.131.1`
-- 预览版（Preview）: `26.0.27`
+- 正式版（Release） : `26.1.1`
+- 预览版（Preview）: `26.10.25`
+
+## 26.10
+
+### 26.10.25
+
+`camera` 命令的 `attach_to_entity`、`detach_from_entity` 与 `play_spline` 子命令无需启用特定实验性玩法。
+
+```
+/camera <players: target> attach_to_entity <entity: target>
+/camera <players: target> detach_from_entity
+/camera <players: target> play_spline <name: string>
+```
 
 ## 26.0
 
 ### 26.0.27
 
-`camera` 命令支持 `attach_to_entity` 与 `detach_from_entity` 子命令。（需要启用特定实验性玩法）
+`camera` 命令支持 `play_spline` 子命令。（需要启用特定实验性玩法）
 
 ```
 /camera <players: target> play_spline <name: string>
@@ -1546,7 +1558,7 @@
 
 ## 最新版本命令列表
 
-版本：26.0.27
+版本：26.10.25
 
 ```
 /? <page: int>
@@ -1554,13 +1566,16 @@
 /aimassist <players: target> clear
 /aimassist <players: target> set [x angle: float] [y angle: float] [max distance: float] [target mode: AimAssistTargetMode] [preset id: string]
 /alwaysday [lock: Boolean]
+/camera <players: target> attach_to_entity <entity: target>
 /camera <players: target> clear
+/camera <players: target> detach_from_entity
 /camera <players: target> fade
 /camera <players: target> fade color <red: int> <green: int> <blue: int>
 /camera <players: target> fade time <fadeInSeconds: float> <holdSeconds: float> <fadeOutSeconds: float>
 /camera <players: target> fade time <fadeInSeconds: float> <holdSeconds: float> <fadeOutSeconds: float> color <red: int> <green: int> <blue: int>
 /camera <players: target> fov_clear [fovEaseTime: float] [fovEaseType: Easing]
 /camera <players: target> fov_set <fov_value: float> [fovEaseTime: float] [fovEaseType: Easing]
+/camera <players: target> play_spline <name: string>
 /camera <players: target> remove_target
 /camera <players: target> set <preset: string> [default: default]
 /camera <players: target> set <preset: string> ease <easeTime: float> <easeType: Easing> [default: default]
@@ -1825,13 +1840,6 @@
 /immutableworld [value: Boolean]
 /wb
 /worldbuilder
-```
-
-启用创建者照相机的实验性功能（Experimental Creator Camera Features）后还会添加以下命令语法：
-```
-/camera <players: target> attach_to_entity <entity: target>
-/camera <players: target> detach_from_entity
-/camera <players: target> attach_to_entity <entity
 ```
 
 ## 中国版所对应的国际版一览
